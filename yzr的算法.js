@@ -42,16 +42,19 @@ jiFR:java.io.FileReader,
 jlR:java.lang.Runnable,
 jlS:java.lang.String,
 jl:java.lang,
+jlT:java.lang.Thread,
 jn:java.nio
 }
-
+pg.agC={argb:function(a,r,g,b){return a<<24|r<<16|g<<8|b}}
+function runOnUiThread(f){ctx.runOnUiThread(new pg.jlR() {run: f});}
+function runThread(f){new pg.jlT(new pg.jlR(){run:f}).start();}
 function 存在(path){
 return 文件(path).exists();}
 function mkdir(path){
 new pg.jiF(path).mkdirs();}
 function 文件(path){
 return new pg.jiF(path);}
-var inf={n:"\u0079\u007a\u0072\u7684\u7b97\u6cd5",v:"FINAL0.15.0"};
+var inf={n:"\u0079\u007a\u0072\u7684\u7b97\u6cd5",v:"FINAL0.15.0(颜色修复版)"};
 
 var 更新日志=("最后一个版本！从此不再更新！更多详情查看设置/工具！").replace(/！/g,"！\n")
 
@@ -73,7 +76,7 @@ const 主目录=sdcard+"/games/com.mojang/yzr的js文件夹/"
 
 if(!存在(主目录)){mkdir(主目录)}
 
-var astr=["成功","失败","出错","正在解密，请耐心等待…","读取成功\n","删除数据加密\n","还原格式\n","jside加密方案3\n","js加密器方案2\n","js加密器方案3\n","此为混淆，能解的我已帮你解了\n","写入解密\n",["放在","\n日志信息:\n"],"提示","我知道了","JS公告牌",["有新版本！\n当前:","\n新版:","\n还不赶快更新！\n在 悬浮窗>打开js更新链接 以获取更新或 在任务栏里点击更新消息即可！","更新提示","有更新哦(",")点我跳转查看更新"],"比上次好",["您的手机运算耗时:","\n记录最快:"],"结果","开车","玩家","已自动踢出服务器","进服","退服"," 被 炸妈盒子 炸死了～","无效的快捷方式","长按左上角的快捷方式按钮设置","附加指令设置","启动后要执行的:","指向的函数","预览","保存设置","新的设置将会在重新载入本JS后生效","DEBUG开关","选择一个吧","游戏状态debug","游戏操作日志","重置日志","复制日志到剪贴板","保存运行信息","发送信息","读取物品栏设置","帮助:\n方案1:添加物品速度快，但是有bug，推荐使用方案1\n方案2:需要刷新才能看到(就是按物品栏最后一个…就能刷新)","方案","快捷方式设置","快捷方式指向(@分隔)","指向的函数，使用@分隔，从左到右，从上到下","还原预设","高级附魔工具","长按我试试","正在抽奖…","神器闪电降临！","来也","钻石已送达","已设置出生点","墙体厚度超过限制","你被传送到了传送点: ","找不到该传送点","设置传送点 ","未选择","§2<获得成就> 丧心病狂","空的，再来一次吧","恭喜中钻礼包一份","恭喜中石礼包一份","恭喜中铁礼包一份","恭喜中木礼包一份","恭喜中金礼包一份","恭喜中煤礼包一份","空的，再来一次吧","恭喜再来一次","送你破木棍ㄟ(￣▽￣ㄟ","日志已保存","叫你作死，关你游戏！","作者永远记住你了！","输入/runf 打开帮助()  查看问题解答",["§2百度贴吧柚子人修改大师 制作的版本","！本js开源，§4不要盗版！抄袭狗去死！\n§6输入/ilyzr查看帮助，输入/runf 打开帮助() 查看问题解答。带PC指令哦！材质包使用不当会导致贴图错误！\n§2欢迎加入yzr的mc,tr,gta,bs讨论群，群号码：114559939\n§2百度贴吧搜§6柚子人吧§2查看更多js。\n§6喜欢的话评价一下吧！\n§4如果你永远不想看到本信息或提示，请输入/关闭提示"],"你确定返回刚才的位置吗？","返回","木牌设置","第一行","第二行","第三行","第四行","将难度设置为",["和平","简单","普通","困难"],"哦，那看起来一定很疼","执行完毕","浏览器","http://tieba.baidu.com/f?kw=%E6%9F%9A%E5%AD%90%E4%BA%BA&mo_device=1&ssid=0&from=1086k&uid=0&pu=usm@0,sz@1320_1002,ta@iphone_2_4.2_2_6.4&bd_page_type=1&baiduid=3E8828E8C7D10DD340D7912DE6D62CE48&tj=www_normal_1_0_10_title?pn=0&",["已清除 "," 的物品栏"],["已移除 "," 的所有药水效果"],"给予 ",[" 时长为 ","秒的 "," (ID",") 效果"],"切换为下雨天","切换为雷暴天","切换为无天气","已更改游戏规则","经验 ","已锁定时间","已恢复时间","将时间设置为",["将","的模式改为","模式"],"生存","创造","冒险","旁观","个(ID为",")物品","输入数值不合法","传送到","已治愈","的出生点设置为","js帮助：/核弹:神器点击进行核爆炸。/土豪:用神器点击泥土、圆石、木板、沙子、草方块、原木和石头对应变成钻石块、绿宝石、金块、煤块、青金石块、红石块和铁块土豪方块。/还原:还原方块。/日出:调日出，/日落:调日落。/送钻石:点击方块送钻石。\n /创造:变成创造，/生存:变成生存。/出生点:开启设置出生点。/off:全部关闭。/神器:送神器。:/骑动物:骑动物，/动物骑动物:开启动物骑动物模式，/爆菊:爆菊模式，/改名:生物改名。/打闪电:神器点击打闪电。开启功能时会关闭其他功能。 /秒挖:开启秒挖，/捡物品:开启捡物品，/关闭提示 关闭提示,/声明:查看声明。/评价:评价本js^O^","点击生物改名","§4您没有使用该命令的权限！","已变为创造模式","已变为生存模式","已调成日出","已调成日落","§2谢谢你的评价！作者qq:1303895279。我会做出更多好玩的js的！","§4谢谢你的评价！作者qq:1303895279。我会努力改进的！再见玩家！","§4未知指令，输入/help查看帮助","选择打开方式","打开","文本编辑,音频,图像,文本查看,解密并执行,其他,设置为悬浮窗图片,导入base64码为悬浮窗图片,查看该js的所有函数,复制,删除","文本编辑","音乐播放器","图片预览","文本字符数:","已关闭所有功能","开启土豪模式，神器点击方块变土豪方块","开启生成作者，点击方块生成","开启改名字，在聊天框输入/改名字[你要改的名字] 点击生物改名字","开启玩家爆菊模式","开启还原方块，点击土豪方块还原","开启秒杀","开启打闪电，点击地面或生物","输入/好评以好评，输入/差评以差评","开启送钻石，点击方块送钻石","开启设置出生点，点击方块设置","开启骑动物模式，点击生物骑行","开启核弹，点击方块爆炸","开启生物骑生物，依次点击两个生物进行骑行","开启捡物品，拿着神器就能捡","开启秒挖，点击方块挖，基岩都能挖","开启穿墙，点击面前的方块，不要点坑里的，否则…","开启抽奖，使用生的鄙视牌钻石，每次消耗一个","神器已送达，注意在背包查收","自定义窗口","终端模拟器","文件浏览器","神器功能","传送重生","人物编辑","背包设置","游戏设置","实体编辑","药水效果","玩家列表","粒子设置","辅助","确定删除","确定√","取消×","文件","删除","有什么问题吗？","GUI缩放,如何重置设置,服务器不能用,无法使用部分功能,显示不正常,悬浮窗没有图片","请在接下来的窗口设置","设置","设置以下大小即可","当前大小(原250)","确定重置？","设置被重置，请重启游戏！不要进退存档","废话！服务器当然不能用！","具体哪个功能","这是分辨率问题，可以试试js外观设置","请选择一个文件","yzr制作(长按上面的获取帮助)","内置预设窗口","以下仅供测试使用","新建模板 +","从百度云下载","设置/工具","DEBUG","快捷方式按钮","人工modtick","广播客户端消息","newLevel提示","禁用BGM","启动时显示公告","禁用检查更新","读取物品栏设置","启动后附加指令","请输入函数","执行函数","性♂能测试","点一次就够了，测试中不要点别的地方","重置窗口变量","截图(闪退)",["已截图，保存在","yzr截图.png 中"],"重置设置","js外观设置","帮助与提示","查看命令帮助","查看专用命令帮助","查看新手帮助","查看声明","查看该版更新","查看 *柚子人吧* 贴吧","这个地方是空的","查看js公告牌","js公告牌","给作者写邮件",["(重要) "," 用户反馈","(请写上您对本js的意见或建议或反馈内容，最好附图)\n发送给yzr柚子人的无敌真四核大音量带U盘接口神机红米1"],"打开作者的分享","复制","直接下载更新","检索函数","搜索语言包","http://pan.baidu.com/share/link?shareid=1703652795&uk=473707583","\x68\x74\x74\x70\x73\x3a\x2f\x2f\x79\x7a\x72\x69\x6c\x79\x7a\x72\x2e\x77\x6f\x64\x65\x6d\x6f\x2e\x63\x6f\x6d\x2f\x65\x6e\x74\x72\x79\x2f\x34\x30\x30\x39\x31\x34","点击文件浏览器的路径栏就能复制了\n复制时会很慢，因为这是js","文件已存在无法复制","http://pan.baidu.com/share/link?shareid=4210294607&uk=473707583","使用旧版本GUI","可能会出现兼容性问题","显示操作日志","粘贴","账户已过期，请重新登录！","没有输入账号密码","账号或密码错误\n或不存在的账号","无法获取登录信息！请稍后再试！","js被修改过！可能被植入了病毒！","很抱歉！您下载的是盗版的js","modscripts","窗口添加到主菜单","欢迎使用本js！\n请先登录才能使用","请输入账号！如果没有请申请！申请请加入QQ群:114559939","输入你的账号","输入你的密码","登录","登录中","我给你一次删除js的机会\n10秒后自动退出"];
+var astr=["成功","失败","出错","正在解密，请耐心等待…","读取成功\n","删除数据加密\n","还原格式\n","jside加密方案3\n","js加密器方案2\n","js加密器方案3\n","此为混淆，能解的我已帮你解了\n","写入解密\n",["放在","\n日志信息:\n"],"提示","我知道了","JS公告牌",["有新版本！\n当前:","\n新版:","\n还不赶快更新！\n在 悬浮窗>打开js更新链接 以获取更新或 在任务栏里点击更新消息即可！","更新提示","有更新哦(",")点我跳转查看更新"],"比上次好",["您的手机运算耗时:","\n记录最快:"],"结果","开车","玩家","已自动踢出服务器","进服","退服"," 被 炸妈盒子 炸死了～","无效的快捷方式","长按左上角的快捷方式按钮设置","附加指令设置","启动后要执行的:","指向的函数","预览","保存设置","新的设置将会在重新载入本JS后生效","DEBUG开关","选择一个吧","游戏状态debug","游戏操作日志","重置日志","复制日志到剪贴板","保存运行信息","发送信息","读取物品栏设置","帮助:\n方案1:添加物品速度快，但是有bug，推荐使用方案1\n方案2:需要刷新才能看到(就是按物品栏最后一个…就能刷新)","方案","快捷方式设置","快捷方式指向(@分隔)","指向的函数，使用@分隔，从左到右，从上到下","还原预设","高级附魔工具","长按我试试","正在抽奖…","神器闪电降临！","来也","钻石已送达","已设置出生点","墙体厚度超过限制","你被传送到了传送点: ","找不到该传送点","设置传送点 ","未选择","§2<获得成就> 丧心病狂","空的，再来一次吧","恭喜中钻礼包一份","恭喜中石礼包一份","恭喜中铁礼包一份","恭喜中木礼包一份","恭喜中金礼包一份","恭喜中煤礼包一份","空的，再来一次吧","恭喜再来一次","送你破木棍ㄟ(￣▽￣ㄟ","日志已保存","叫你作死，关你游戏！","作者永远记住你了！","输入/runf 打开帮助()  查看问题解答",["§2百度贴吧柚子人修改大师 制作的版本","！本js开源，§4不要盗版！抄袭狗去死！\n§6输入/ilyzr查看帮助，输入/runf 打开帮助() 查看问题解答。带PC指令哦！材质包使用不当会导致贴图错误！\n§2欢迎加入yzr的mc,tr,gta,bs讨论群，群号码：123456789\n§2百度贴吧搜§6柚子人吧§2查看更多js。\n§6喜欢的话评价一下吧！\n§4如果你永远不想看到本信息或提示，请输入/关闭提示"],"你确定返回刚才的位置吗？","返回","木牌设置","第一行","第二行","第三行","第四行","将难度设置为",["和平","简单","普通","困难"],"哦，那看起来一定很疼","执行完毕","浏览器","http://tieba.baidu.com/f?kw=%E6%9F%9A%E5%AD%90%E4%BA%BA&mo_device=1&ssid=0&from=1086k&uid=0&pu=usm@0,sz@1320_1002,ta@iphone_2_4.2_2_6.4&bd_page_type=1&baiduid=3E8828E8C7D10DD340D7912DE6D62CE48&tj=www_normal_1_0_10_title?pn=0&",["已清除 "," 的物品栏"],["已移除 "," 的所有药水效果"],"给予 ",[" 时长为 ","秒的 "," (ID",") 效果"],"切换为下雨天","切换为雷暴天","切换为无天气","已更改游戏规则","经验 ","已锁定时间","已恢复时间","将时间设置为",["将","的模式改为","模式"],"生存","创造","冒险","旁观","个(ID为",")物品","输入数值不合法","传送到","已治愈","的出生点设置为","js帮助：/核弹:神器点击进行核爆炸。/土豪:用神器点击泥土、圆石、木板、沙子、草方块、原木和石头对应变成钻石块、绿宝石、金块、煤块、青金石块、红石块和铁块土豪方块。/还原:还原方块。/日出:调日出，/日落:调日落。/送钻石:点击方块送钻石。\n /创造:变成创造，/生存:变成生存。/出生点:开启设置出生点。/off:全部关闭。/神器:送神器。:/骑动物:骑动物，/动物骑动物:开启动物骑动物模式，/爆菊:爆菊模式，/改名:生物改名。/打闪电:神器点击打闪电。开启功能时会关闭其他功能。 /秒挖:开启秒挖，/捡物品:开启捡物品，/关闭提示 关闭提示,/声明:查看声明。/评价:评价本js^O^","点击生物改名","§4您没有使用该命令的权限！","已变为创造模式","已变为生存模式","已调成日出","已调成日落","§2谢谢你的评价！作者qq:123456789。我会做出更多好玩的js的！","§4谢谢你的评价！作者qq:123456789。我会努力改进的！再见玩家！","§4未知指令，输入/help查看帮助","选择打开方式","打开","文本编辑,音频,图像,文本查看,解密并执行,其他,设置为悬浮窗图片,导入base64码为悬浮窗图片,查看该js的所有函数,复制,删除","文本编辑","音乐播放器","图片预览","文本字符数:","已关闭所有功能","开启土豪模式，神器点击方块变土豪方块","开启生成作者，点击方块生成","开启改名字，在聊天框输入/改名字[你要改的名字] 点击生物改名字","开启玩家爆菊模式","开启还原方块，点击土豪方块还原","开启秒杀","开启打闪电，点击地面或生物","输入/好评以好评，输入/差评以差评","开启送钻石，点击方块送钻石","开启设置出生点，点击方块设置","开启骑动物模式，点击生物骑行","开启核弹，点击方块爆炸","开启生物骑生物，依次点击两个生物进行骑行","开启捡物品，拿着神器就能捡","开启秒挖，点击方块挖，基岩都能挖","开启穿墙，点击面前的方块，不要点坑里的，否则…","开启抽奖，使用生的鄙视牌钻石，每次消耗一个","神器已送达，注意在背包查收","自定义窗口","终端模拟器","文件浏览器","神器功能","传送重生","人物编辑","背包设置","游戏设置","实体编辑","药水效果","玩家列表","粒子设置","辅助","确定删除","确定√","取消×","文件","删除","有什么问题吗？","GUI缩放,如何重置设置,服务器不能用,无法使用部分功能,显示不正常,悬浮窗没有图片","请在接下来的窗口设置","设置","设置以下大小即可","当前大小(原250)","确定重置？","设置被重置，请重启游戏！不要进退存档","废话！服务器当然不能用！","具体哪个功能","这是分辨率问题，可以试试js外观设置","请选择一个文件","yzr制作(长按上面的获取帮助)","内置预设窗口","以下仅供测试使用","新建模板 +","从百度云下载","设置/工具","DEBUG","快捷方式按钮","人工modtick","广播客户端消息","newLevel提示","禁用BGM","启动时显示公告","禁用检查更新","读取物品栏设置","启动后附加指令","请输入函数","执行函数","性♂能测试","点一次就够了，测试中不要点别的地方","重置窗口变量","截图(闪退)",["已截图，保存在","yzr截图.png 中"],"重置设置","js外观设置","帮助与提示","查看命令帮助","查看专用命令帮助","查看新手帮助","查看声明","查看该版更新","查看 *柚子人吧* 贴吧","这个地方是空的","查看js公告牌","js公告牌","给作者写邮件",["(重要) "," 用户反馈","(请写上您对本js的意见或建议或反馈内容，最好附图)\n发送给yzr柚子人的无敌真四核大音量带U盘接口神机红米1"],"打开作者的分享","复制","直接下载更新","检索函数","搜索语言包","http://pan.baidu.com/share/link?shareid=1703652795&uk=473707583","\x68\x74\x74\x70\x73\x3a\x2f\x2f\x79\x7a\x72\x69\x6c\x79\x7a\x72\x2e\x77\x6f\x64\x65\x6d\x6f\x2e\x63\x6f\x6d\x2f\x65\x6e\x74\x72\x79\x2f\x34\x30\x30\x39\x31\x34","点击文件浏览器的路径栏就能复制了\n复制时会很慢，因为这是js","文件已存在无法复制","http://pan.baidu.com/share/link?shareid=4210294607&uk=473707583","使用旧版本GUI","可能会出现兼容性问题","显示操作日志","粘贴","账户已过期，请重新登录！","没有输入账号密码","账号或密码错误\n或不存在的账号","无法获取登录信息！请稍后再试！","js被修改过！可能被植入了病毒！","很抱歉！您下载的是盗版的js","modscripts","窗口添加到主菜单","欢迎使用本js！\n请先登录才能使用","请输入账号！如果没有请申请！申请请加入QQ群:123456789","输入你的账号","输入你的密码","登录","登录中","我给你一次删除js的机会\n10秒后自动退出"];
 //length=我也不知道
 
 var 物品id组=[999,998,997,996,995,994,993,992,991,990];
@@ -83,14 +86,14 @@ var aswi=[false,false,false,false,false,false,false,false,false,false,false,fals
 /*禁用更新,主要适应,关闭公告,广播,换ID,药水攻击,碰撞箱0,疾跑,启用modtick,防爆,防实体卡机,玩家buff,写日志,bgm,极限装逼模式,第一次进入,防熊,debug,死亡不掉落,死亡,箱子全满,无敌,记仇,关闭提示,验证过,复制*/
 
 
-var 日志窗口组件,日志窗口,复制按钮,复制路径="",更新地址,yzr实体,公告,炸妈TNT,seal=0,跑分=999999,效果组=[],打字附加,粒子种类,大小=0,粒子种类名称="未选择",添加的玩家=[],扔东西按钮,debug显示,悬浮窗路径=主目录+"悬浮窗图片.png",开火按钮,附魔按钮,踢人名称="请先添加，比如:Steve",附加指令读取="",xis=35204,快捷方式x=300,快捷方式y=100,快捷方式,快捷方式读取="随机改名()@清除所有实体()@Entity.setNameTag(getPlayerEnt(),\"\")@",savelog=0,检查更新,粒子值=1,返回按钮,功能提示倒计时=0,作者信息倒计时=500,颜色="",颜色时间=0,fpr=60000,debug实体id=0,debug实体模型id=0,选取按钮,debug实体血量=0,debug实体倒计时=100,第一次生物,第二次生物,名字,杀死作者次数=0,提示信息触发=-1,close=-1,效果id=0,效果名称,debug方块id=0,debug方块dmg=0,debug方块倒计时=100,debug方块side=0,功能=0,功能名称="",抽奖倒计时=-1,锁定时间=[false,0],鄙视延迟=0,总设值=0,效果强度=0,效果时间=0,var信息,效果id,控制玩家,控制实体=0,实体id设置=0,实体模型设置=0,实体年龄=0,实体血量=0,实体pitch=0,实体yaw=0,实体x速=0,实体y速=0,实体z速=0,实体名字,x速度=0,y速度=0,z速度=0,alert内容,玩家固定数=11;
+var 日志窗口组件,日志窗口,复制按钮,复制路径="",更新地址,yzr实体,公告,炸妈TNT,seal=0,跑分=999999,效果组=[],打字附加,粒子种类,大小=0,粒子种类名称="未选择",添加的玩家=[],扔东西按钮,debug显示,悬浮窗路径=主目录+"悬浮窗图片.png",开火按钮,附魔按钮,踢人名称="请先添加，比如:Steve",附加指令读取="",xis=51381,快捷方式x=300,快捷方式y=100,快捷方式,快捷方式读取="随机改名()@清除所有实体()@Entity.setNameTag(getPlayerEnt(),\"\")@",savelog=0,检查更新,粒子值=1,返回按钮,功能提示倒计时=0,作者信息倒计时=500,颜色="",颜色时间=0,fpr=60000,debug实体id=0,debug实体模型id=0,选取按钮,debug实体血量=0,debug实体倒计时=100,第一次生物,第二次生物,名字,杀死作者次数=0,提示信息触发=-1,close=-1,效果id=0,效果名称,debug方块id=0,debug方块dmg=0,debug方块倒计时=100,debug方块side=0,功能=0,功能名称="",抽奖倒计时=-1,锁定时间=[false,0],鄙视延迟=0,总设值=0,效果强度=0,效果时间=0,var信息,效果id,控制玩家,控制实体=0,实体id设置=0,实体模型设置=0,实体年龄=0,实体血量=0,实体pitch=0,实体yaw=0,实体x速=0,实体y速=0,实体z速=0,实体名字,x速度=0,y速度=0,z速度=0,alert内容,玩家固定数=11;
 
 var 定住玩家=[],玩家数组=[],获取玩家;
 
 var gui缩放=250,文字大小=15,acolor=160,rcolor=140,gcolor=255,bcolor=0,acolort=255,rcolort=0,gcolort=0,bcolort=0,acolorm=114,rcolorm=102,gcolorm=204,bcolorm=255,主要w=100,主要h=100
 
 function alert内容设置(){
-alert内容=["(禁止多玩使用！)\n(本js完全免费，如果你花钱买的，恭喜你你被骗了)\n本js为个人作品，不承担任何法律责任\n*版本:"+inf.v+"*\n这是我做的版本:"+inf.v+" 的js。本js仅限于个人使用，未经允许严禁转载！转载时请说明出处！谢谢！\n本js为个人作品，不承担任何法律责任！\n感谢:*920编辑器*，*BlockLauncherPro*以及*mcpejs编辑器*的编辑软件！\n&测试人员&:yzr\n★编程人员☆:还是yzr\n♀查错♂:yzr\n如果你找到本js的bug并告诉我的话\n你的昵称会在这显示\n感谢 ZhuoWei Zhang 大大的*BlockLauncherPro*\n(以下算法出自JsIDE，挺不错的js制作软件)\n感谢@Critical闪 的*移动按钮*算法\n感谢@祁伴怂 的*三角函数的粒子*算法\n感谢@杨礼嶂 的*以玩家名称获取实体*","[本段帮助需要您的帮助编辑！如果想编辑的给作者发邮件或QQ！作者需要您的帮助！如果实在看不懂就呵呵！(´・ω・`)]\n本js存储目录:"+主目录+"\n如果基友进不去就关掉材质包\n"+inf.n+"\n————物品类————\n1。神器:ID:"+物品id组[2]+"\n   合成材料:9*彩色物质*\n   获得方法:合成\n   用于合成:无\n   特性:dmg:100，骑动物+3dmg，秒杀爆\n   菊+5dmg，开启功能时点击地面+1dmg，\n   完全损坏会变成1*钻石块*。\n   拿着神器有特殊效果哦\n2。我鄙视你:ID:"+物品id组[0]+"\n   合成材料:无法合成\n   获得方法:打死作者\n   用于合成:*生的鄙视牌钻石*\n   特性:拿着每10秒会遭到作者鄙视\n3。生的鄙视牌钻石:ID:"+物品id组[1]+"\n   合成材料:*我鄙视你*\n   获得方法:*假钻石块*合成,或*我鄙视你*合成\n   用于合成:熔炉烧出*烤熟的鄙视牌钻石*\n   特性:吃下恢复2饥饿值\n4。烤熟的鄙视牌钻石ID:"+物品id组[3]+"\n   合成材料:熔炉烧*生的鄙视牌钻石*\n   获得方法:同上\n   用于合成:无\n   特性:吃下恢复20饥饿值\n5。假钻石块ID:255\n   合成材料:无法合成\n   获得方法:打死作者\n   用于合成:*生的鄙视牌钻石*\n   特性:防爆，可以装逼，发光，做食物，不能在\n   上面放门，使用稿子挖掘\n6。砖石剑升级版ID:"+物品id组[7]+"\n   合成材料:*砖石*，*烈焰棒*\n   获得方法:合成\n   用于合成:无\n   特性:攻击力7\n7。冰之剑ID:"+物品id组[6]+"\n   合成材料:2*雪球*，*木棍*，2*钻石*\n   获得方法:合成\n   用于合成:无\n   特性:攻击力5\n8。神器圣剑ID:"+物品id组[5]+"\n   合成材料:2*彩色物质*，*钻石*\n   获得方法:合成\n   用于合成:无\n   特性:攻击力9\n9。血之剑ID:"+物品id组[4]+"\n   合成材料:2*红石*，2*钻石*，*木棍*\n   获得方法:合成\n   用于合成:无\n   特性:攻击力6\n9。彩色物质ID:"+物品id组[8]+"\n   合成材料:*钻石*，*绿宝石*，*铁锭*，*金锭*\n   *青金石*，*红石，*莹石粉*，*下界石英*\n   *烈焰棒*\n   获得方法:合成\n   用于合成:*神器*，*神器圣剑*\n   特性:无，就是很贵\n10。选取工具ID:"+物品id组[9]+"\n   合成材料:4*彩色物质*\n   获得方法:合成\n   用于合成:无\n   特性:选取实体与方块\n\n————玩法————\n首先声明:\n由于使用该js出现的毁图、死机、重启，作者尚不负责！\n如有bug请反馈邮箱\n玩法自寻…(既然你看了帮助那我就告诉你吧)\n玩家名字改成不是Steve就能开启按钮，长按能移动按钮(某位大神的算法),按钮有许多功能哦！\n输入/help查看帮助\n输入/ilyzr查看专用帮助\n试试按钮里面的debugㄟ(￣▽￣ㄟ)\n按钮菜单里面有解密简单js功能哦\n只要放在/sdcard/加密的js.js 后点击解密\n解密后的js自动出现在/sdcard/yzr解密的js.js\n太复杂的解不了，可以找我帮你解\n换皮肤请放在材质包里并命名为skin0.png~skin9.png\n披风同理\n现在各种功能分类了，更好看！界面支持调整颜色位置大小哦\n游戏辅助都是开挂必备\n小工具请慎用，可能会闪退，有物品栏保存读取功能，传送点保存读取，玩家检测+实体设置，给你创世神的乐趣\n\n————作者的话————\n不要抄袭！\n\n转载时注明 @柚子人修改大师 制作\n关注百度 柚子人吧\n作者QQ:1303895279\nQQ群:114559939\n邮箱:asdfg636254@163.com\n欢迎提出意见或建议\n高手勿喷\n本js未加密，请不要抄袭\n需要帮忙 解密js 的找我，联系方法在上面\n不要抄袭！\n作者称呼:\n柚子人(一般称呼简称)\n柚子人ilyzr(一般称呼)\n柚子人ilyzr45997(备用一般称呼)\nilyzr(备用游戏名)\nilyzr45997(第二个备用游戏名)\nyzr(游戏名)\n柚子人修改大师(百度贴吧名)\n♠柚子人yzr.ilyzr∑(^∪^)∑(防盗QQ名)\n都行\n不要抄袭！\n重要的事情说三遍！\n如果有错别字不要吐槽(´・ω・`)\n\n————一些杂事————\n本js前身是 yzr的超强金剑 反正就是我做的\n这个是我的第一个js，你肯定想不到\n我只是个熟练的新手……","/clear 清除物品栏\n/debug 开启debug模式\n/difficulty [0|1|2] 设置游戏难度\n/effect [clear]|[效果id] [时长] [等级] 添加药水效果\n/gamemode [0|1|2] 切换游戏模式\n/gamerule 游戏规则\n/give [id] [数量] [物品特殊数据] 给予物品\n/heal 治疗玩家\n/help [页码] 显示帮助\n/off 关闭神器功能\n/repair 修复手中工具\n/runf [内置函数] 执行函数\n/setwarp [传送点名称] 设置传送点\n/spawn 回到出生点\n/spawnpoint 设置出生点\n/tp [x] [y] [z] 传送\n/time [stop|start|add|set] 设置时间\n/warp [传送点名称] 传送到一个传送点\n/weather [clear|rainy|thunder] 天气\n/xp [经验值] 给予经验\n"+inf.n+"专用命令:\n/无敌 开启无敌\n/飞行 开启飞行\n/抽奖 用生的鄙视牌钻石抽奖\n/改名字 改名字\n/土豪 土豪模式\n/核弹 神器核弹\n/还原 还原方块\n/秒杀 开启秒杀\n/骑动物 开启骑动物\n/穿墙 开启穿墙\n/打闪电 开启打闪电\n/秒挖 开启秒挖\n/创造 调创造\n/生存 调生存\n/日出 调日出\n/日落 调日落\n/生成作者 生成作者\n/改名 开启改名字\n/爆菊 开启爆菊模式\n/送钻石 开启送钻石\n/捡物品 开启捡物品\n/神器 给神器\n/出生点 开启设置出生点\n/评价 评价\n/声明 查看声明\n/贴吧 打开浏览器柚子人吧\n/关闭提示 关闭提示",inf.n+"js专用命令帮助：\n(开启功能时会关闭其他功能)\n/核弹:神器点击进行核爆炸\n/土豪:用神器点击泥土、圆石、木板、沙子、草方块、原木和石头对应变成钻石块、绿宝石、金块、煤块、青金石块、红石块和铁块土豪方块\n/还原:还原方块\n/日出:调日出\n/日落:调日落\n/送钻石:点击方块送钻石\n/创造:变成创造\n/生存:变成生存\n/出生点:开启设置出生点\n/off:全部关闭\n/神器:送神器\n/骑动物:骑动物\n/动物骑动物:开启动物骑动物模式\n/爆菊:爆菊模式\n/改名:生物改名\n/打闪电:神器点击打闪电\n/秒挖:开启秒挖\n/捡物品:开启捡物品\n/穿墙:穿墙模式\n/关闭提示:关闭提示\n/声明:查看声明\n/评价:评价本js^O^","当前版本:"+inf.v+"\n更新内容:\n"+更新日志,"未找到BGM包,请将 music 文件夹放在 "+主目录+" 下并确保 music 文件夹下有3个文件夹！确保 "+主目录+" 下有 music 文件夹！解压时请选择 *解压到当前目录* 而不是 *解压到/<压缩文档名称>/* \n错误信息:\n"]}
+alert内容=["(禁止多玩使用！)\n(本js完全免费，如果你花钱买的，恭喜你你被骗了)\n本js为个人作品，不承担任何法律责任\n*版本:"+inf.v+"*\n这是我做的版本:"+inf.v+" 的js。本js仅限于个人使用，未经允许严禁转载！转载时请说明出处！谢谢！\n本js为个人作品，不承担任何法律责任！\n感谢:*920编辑器*，*BlockLauncherPro*以及*mcpejs编辑器*的编辑软件！\n&测试人员&:yzr\n★编程人员☆:还是yzr\n♀查错♂:yzr\n如果你找到本js的bug并告诉我的话\n你的昵称会在这显示\n感谢 ZhuoWei Zhang 大大的*BlockLauncherPro*\n(以下算法出自JsIDE，挺不错的js制作软件)\n感谢@Critical闪 的*移动按钮*算法\n感谢@祁伴怂 的*三角函数的粒子*算法\n感谢@杨礼嶂 的*以玩家名称获取实体*","[本段帮助需要您的帮助编辑！如果想编辑的给作者发邮件或QQ！作者需要您的帮助！如果实在看不懂就呵呵！(´・ω・`)]\n本js存储目录:"+主目录+"\n如果基友进不去就关掉材质包\n"+inf.n+"\n————物品类————\n1。神器:ID:"+物品id组[2]+"\n   合成材料:9*彩色物质*\n   获得方法:合成\n   用于合成:无\n   特性:dmg:100，骑动物+3dmg，秒杀爆\n   菊+5dmg，开启功能时点击地面+1dmg，\n   完全损坏会变成1*钻石块*。\n   拿着神器有特殊效果哦\n2。我鄙视你:ID:"+物品id组[0]+"\n   合成材料:无法合成\n   获得方法:打死作者\n   用于合成:*生的鄙视牌钻石*\n   特性:拿着每10秒会遭到作者鄙视\n3。生的鄙视牌钻石:ID:"+物品id组[1]+"\n   合成材料:*我鄙视你*\n   获得方法:*假钻石块*合成,或*我鄙视你*合成\n   用于合成:熔炉烧出*烤熟的鄙视牌钻石*\n   特性:吃下恢复2饥饿值\n4。烤熟的鄙视牌钻石ID:"+物品id组[3]+"\n   合成材料:熔炉烧*生的鄙视牌钻石*\n   获得方法:同上\n   用于合成:无\n   特性:吃下恢复20饥饿值\n5。假钻石块ID:255\n   合成材料:无法合成\n   获得方法:打死作者\n   用于合成:*生的鄙视牌钻石*\n   特性:防爆，可以装逼，发光，做食物，不能在\n   上面放门，使用稿子挖掘\n6。砖石剑升级版ID:"+物品id组[7]+"\n   合成材料:*砖石*，*烈焰棒*\n   获得方法:合成\n   用于合成:无\n   特性:攻击力7\n7。冰之剑ID:"+物品id组[6]+"\n   合成材料:2*雪球*，*木棍*，2*钻石*\n   获得方法:合成\n   用于合成:无\n   特性:攻击力5\n8。神器圣剑ID:"+物品id组[5]+"\n   合成材料:2*彩色物质*，*钻石*\n   获得方法:合成\n   用于合成:无\n   特性:攻击力9\n9。血之剑ID:"+物品id组[4]+"\n   合成材料:2*红石*，2*钻石*，*木棍*\n   获得方法:合成\n   用于合成:无\n   特性:攻击力6\n9。彩色物质ID:"+物品id组[8]+"\n   合成材料:*钻石*，*绿宝石*，*铁锭*，*金锭*\n   *青金石*，*红石，*莹石粉*，*下界石英*\n   *烈焰棒*\n   获得方法:合成\n   用于合成:*神器*，*神器圣剑*\n   特性:无，就是很贵\n10。选取工具ID:"+物品id组[9]+"\n   合成材料:4*彩色物质*\n   获得方法:合成\n   用于合成:无\n   特性:选取实体与方块\n\n————玩法————\n首先声明:\n由于使用该js出现的毁图、死机、重启，作者尚不负责！\n如有bug请反馈邮箱\n玩法自寻…(既然你看了帮助那我就告诉你吧)\n玩家名字改成不是Steve就能开启按钮，长按能移动按钮(某位大神的算法),按钮有许多功能哦！\n输入/help查看帮助\n输入/ilyzr查看专用帮助\n试试按钮里面的debugㄟ(￣▽￣ㄟ)\n按钮菜单里面有解密简单js功能哦\n只要放在/sdcard/加密的js.js 后点击解密\n解密后的js自动出现在/sdcard/yzr解密的js.js\n太复杂的解不了，可以找我帮你解\n换皮肤请放在材质包里并命名为skin0.png~skin9.png\n披风同理\n现在各种功能分类了，更好看！界面支持调整颜色位置大小哦\n游戏辅助都是开挂必备\n小工具请慎用，可能会闪退，有物品栏保存读取功能，传送点保存读取，玩家检测+实体设置，给你创世神的乐趣\n\n————作者的话————\n不要抄袭！\n\n转载时注明 @柚子人修改大师 制作\n关注百度 柚子人吧\n作者QQ:123456789\nQQ群:123456789\n邮箱:asdfg636254@163.com\n欢迎提出意见或建议\n高手勿喷\n本js未加密，请不要抄袭\n需要帮忙 解密js 的找我，联系方法在上面\n不要抄袭！\n作者称呼:\n柚子人(一般称呼简称)\n柚子人ilyzr(一般称呼)\n柚子人ilyzr45997(备用一般称呼)\nilyzr(备用游戏名)\nilyzr45997(第二个备用游戏名)\nyzr(游戏名)\n柚子人修改大师(百度贴吧名)\n♠柚子人yzr.ilyzr∑(^∪^)∑(防盗QQ名)\n都行\n不要抄袭！\n重要的事情说三遍！\n如果有错别字不要吐槽(´・ω・`)\n\n————一些杂事————\n本js前身是 yzr的超强金剑 反正就是我做的\n这个是我的第一个js，你肯定想不到\n我只是个熟练的新手……","/clear 清除物品栏\n/debug 开启debug模式\n/difficulty [0|1|2] 设置游戏难度\n/effect [clear]|[效果id] [时长] [等级] 添加药水效果\n/gamemode [0|1|2] 切换游戏模式\n/gamerule 游戏规则\n/give [id] [数量] [物品特殊数据] 给予物品\n/heal 治疗玩家\n/help [页码] 显示帮助\n/off 关闭神器功能\n/repair 修复手中工具\n/runf [内置函数] 执行函数\n/setwarp [传送点名称] 设置传送点\n/spawn 回到出生点\n/spawnpoint 设置出生点\n/tp [x] [y] [z] 传送\n/time [stop|start|add|set] 设置时间\n/warp [传送点名称] 传送到一个传送点\n/weather [clear|rainy|thunder] 天气\n/xp [经验值] 给予经验\n"+inf.n+"专用命令:\n/无敌 开启无敌\n/飞行 开启飞行\n/抽奖 用生的鄙视牌钻石抽奖\n/改名字 改名字\n/土豪 土豪模式\n/核弹 神器核弹\n/还原 还原方块\n/秒杀 开启秒杀\n/骑动物 开启骑动物\n/穿墙 开启穿墙\n/打闪电 开启打闪电\n/秒挖 开启秒挖\n/创造 调创造\n/生存 调生存\n/日出 调日出\n/日落 调日落\n/生成作者 生成作者\n/改名 开启改名字\n/爆菊 开启爆菊模式\n/送钻石 开启送钻石\n/捡物品 开启捡物品\n/神器 给神器\n/出生点 开启设置出生点\n/评价 评价\n/声明 查看声明\n/贴吧 打开浏览器柚子人吧\n/关闭提示 关闭提示",inf.n+"js专用命令帮助：\n(开启功能时会关闭其他功能)\n/核弹:神器点击进行核爆炸\n/土豪:用神器点击泥土、圆石、木板、沙子、草方块、原木和石头对应变成钻石块、绿宝石、金块、煤块、青金石块、红石块和铁块土豪方块\n/还原:还原方块\n/日出:调日出\n/日落:调日落\n/送钻石:点击方块送钻石\n/创造:变成创造\n/生存:变成生存\n/出生点:开启设置出生点\n/off:全部关闭\n/神器:送神器\n/骑动物:骑动物\n/动物骑动物:开启动物骑动物模式\n/爆菊:爆菊模式\n/改名:生物改名\n/打闪电:神器点击打闪电\n/秒挖:开启秒挖\n/捡物品:开启捡物品\n/穿墙:穿墙模式\n/关闭提示:关闭提示\n/声明:查看声明\n/评价:评价本js^O^","当前版本:"+inf.v+"\n更新内容:\n"+更新日志,"未找到BGM包,请将 music 文件夹放在 "+主目录+" 下并确保 music 文件夹下有3个文件夹！确保 "+主目录+" 下有 music 文件夹！解压时请选择 *解压到当前目录* 而不是 *解压到/<压缩文档名称>/* \n错误信息:\n"]}
 alert内容设置();
 //1土豪2生成作者3改名4爆菊5还原
 //6秒杀7打闪电8评价9送钻石10设出生点
@@ -121,7 +124,7 @@ try{
 templog.push(str)
 var l=templog.length
 if(l>10){templog=templog.slice(l-10,l)}
-if(日志窗口!=null){ctx.runOnUiThread(new pg.jlR({run:function(){try{日志窗口组件.setText(templog.toString())}catch(e){}}}))}
+if(日志窗口!=null){runOnUiThread(function(){try{日志窗口组件.setText(templog.toString())}catch(e){}})}
 }catch(e){print(e)}
 if(aswi[12]){日志+=str;}
 }
@@ -179,16 +182,16 @@ g=gcolorm;
 b=bcolorm;
 break;
 }
-if(a==null)a=0
-if(r==null)r=0
-if(g==null)g=0
-if(b==null)b=0
-
+if(a==null||a==NaN)a=0
+if(r==null||r==NaN)r=0
+if(g==null||g==NaN)g=0
+if(b==null||b==NaN)b=0
 var aaa=参数(radius)
 var drawable = new android.graphics.drawable.ShapeDrawable(new android.graphics.drawable.shapes.RoundRectShape([aaa, aaa, aaa, aaa, aaa, aaa, aaa, aaa],null, null));
-drawable.getPaint().setColor(android.graphics.Color.argb(a,r,g,b));
+drawable.getPaint().setARGB(a,r,g,b);
 drawable.getPaint().setStyle(android.graphics.Paint.Style.FILL);
 wid.setBackgroundDrawable(drawable)
+//wid.setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(pg.agC.argb(a,r,g,b)))
 return wid
 }
 function 按钮(addto,text,width,height,margin,padding){
@@ -198,13 +201,13 @@ if(margin==null){margin=5}
 if(padding==null){padding=5}
 if(width==-1){height=文字大小*6}
 
-var title=new pg.awTV(ctx);
+var title=new android.widget.Button(ctx);
 title.setTextSize(文字大小);
 外观(title,width,height,margin)
 title.setGravity(17);
 title.setPadding(padding,padding,padding,padding)
 title.setTextColor(pg.agC.argb(acolort,rcolort,gcolort,bcolort))
-圆角(title,0,20)
+//圆角(title,0,20)
 title.setText(text)
 addto.addView(title)
 return title
@@ -279,9 +282,22 @@ else{return false}
 function random(min,max){
 return Math.floor(Math.random()*(max-min))+min}
 
+
+function newByteArray(size){
+return java.nio.ByteBuffer.allocate(size).array();
+}
+function transferStream(iS,oS,interrupter){
+if(interrupter==undefined)interrupter=function(){return true;}
+var buf=newByteArray(1024);
+var i=-1;
+while ((i=iS.read(buf))!=-1&&interrupter()) {
+	oS.write(buf,0,i);
+}
+}
+
 function 解密js(路径2){
 var log=""
-new java.lang.Thread(new pg.jlR({run:function(){
+runThread(function(){
 try{
 print(astr[3])
 var str=读取(路径2)
@@ -321,7 +337,7 @@ log+=astr[11];
 alert(astr[0]+","+astr[12][0]+路径+astr[12][1]+log)
 保存日志("解密js",log)
 }catch(e){alert(astr[1]+":\n"+e)}
-}})).start()
+});
 }
 
 function 外观(widget,width,height,margin){
@@ -375,26 +391,25 @@ print(astr[87]);
 function 任务栏(主要提示,标题,副标题,网址){
 var intent=new pg.ac.Intent(pg.ac.Intent.ACTION_VIEW,pg.an.Uri.parse(网址))
 var pi=pg.aa.PendingIntent.getActivity(ctx,0,intent,0)
-ctx.runOnUiThread(new pg.jlR({run:function(){
+runOnUiThread(function(){
 var nm=ctx.getSystemService(ctx.NOTIFICATION_SERVICE)
 var notify=new pg.aa.Notification(android.R.drawable.btn_dialog,主要提示,0);
 notify.defaults=pg.aa.Notification.DEFAULT_SOUND
 notify.setLatestEventInfo(ctx,标题,副标题,pi);
 nm.notify(0,notify);
-}}))
+})
 }
 function 检索函数(path){
 return eval("\u8bfb\u53d6\u0028\u0070\u0061\u0074\u0068\u0029\u002e\u006d\u0061\u0074\u0063\u0068\u0028\u002f\u0066\u0075\u006e\u0063\u0074\u0069\u006f\u006e\u0020\u002e\u002a\u005c\u0029\u002f\u0067\u0029\u002e\u006a\u006f\u0069\u006e\u0028\u0022\u005c\u006e\u005c\u006e\u0022\u0029")
 }
 function print(str){ 
 保存日志("print",str);
-ctx.runOnUiThread(new pg.jlR({ 
-run:function(){ 
+runOnUiThread(function(){
 pg.aw.Toast.makeText(ctx,"<"+inf.n+">\n"+str,1).show() 
-}}))}
+})}
 
 function alert(内容,标题){
-ctx.runOnUiThread(new pg.jlR({run:function(){try{
+runOnUiThread(function(){try{
 var dialog=new pg.aaADB(ctx);
 if(标题==null){标题=astr[13];}
 dialog.setTitle("<"+inf.n+">"+标题);
@@ -404,8 +419,26 @@ dialog.setPositiveButton(astr[14],null);
 dialog.setNegativeButton(astr[217],new pg.acDIOCL(){onClick:function(dia,w){剪切板(内容);}})
 dialog.show();
 }catch(e){print(astr[2])}
-}}))
+})
 保存日志("alert",内容);
+}
+function getWebBytes(url) {
+	try {
+		var conn = new java.net.URL(url).openConnection();
+        var input = conn.getInputStream();
+        var output = new java.io.ByteArrayOutputStream();
+        transferStream(input,output);
+        input.close();
+        output.flush();
+        output.close();
+        return output.toByteArray();
+	} catch (e) {
+		return astr[2] + (aswi[28] ? e : "");
+	};
+}
+function getWeb(url) {
+	var a=getWebBytes(url);
+	return a==null?(astr[2] + (aswi[28] ? e : "")):new pg.jlS(a);
 }
 
 function cM(str){
@@ -451,7 +484,7 @@ if(存在(主目录+"设置.txt")){写入(主目录+"外观.txt",data2)}
 
 function 读取主数据(){
 保存日志("读取主数据")
-
+/*
 if(存在(主目录+"设置.txt")&&存在(主目录+"外观.txt")){
 var 结果=读取(主目录+"设置.txt").split("★");
 for(i=0;i<结果.length;i++){
@@ -500,7 +533,7 @@ bcolorm=结果[13];
 主要w=结果[14];
 主要h=结果[15];
 }
-else{写入主数据();}
+else{写入主数据();}*/
 }
 
 读取主数据()
@@ -515,7 +548,7 @@ return undefined
 function 性能测试(){
 保存日志("性能测试")
 var start=new Date()
-new java.lang.Thread(new pg.jlR({run:function(){
+runThread(function(){
 var a="",b="",c="",d=""
 for(i=1;i<=5000;i=i+1){a=a+"测试1！"+i;}
 for(i=1;i<=5000;i=i+1){b=b+"测试2！"+10000*10000*i}
@@ -524,7 +557,7 @@ for(i=1;i<=5000;i=i+0.14159521125212626){c=c+"测试4！"+3*i}
 var f=new Date()-start
 if(f<跑分){跑分=f;写入主数据();print(astr[17]);}
 alert(astr[18][0]+f+astr[18][1]+跑分,astr[19]);
-}})).start()
+})
 }
 
 function chatHook(str){
@@ -765,13 +798,13 @@ alert(alert内容[5]+e);aswi[13]=true;}
 
 function 新建按钮(text,w,h){
 var button,win
-ctx.runOnUiThread(new pg.jlR({run:function(){try{
+runOnUiThread(function(){try{
 var layout=new pg.awLL(ctx);
 button=按钮(layout,text,w,h,0,0)
 win=移动按钮(button,0,0,新建窗口(-2,-2,layout,false),false)[1]
 win.showAtLocation(ctx.getWindow().getDecorView(), pg.avG.LEFT | pg.avG.TOP,0,0)
 }catch(e){alert(astr[2]+":\n"+e);}
-}}))
+})
 return [button,win]
 }
 
@@ -821,7 +854,7 @@ var dkx=xis+fpr*2
 function 打开快捷方式(){
 保存日志("打开快捷方式");
 print(astr[27])
-ctx.runOnUiThread(new pg.jlR({run:function(){try{
+runOnUiThread(function(){try{
 var $1=new pg.awLL(ctx);
 $1.setOrientation(1);
 $1.setGravity(17);
@@ -903,14 +936,14 @@ $1.addView($6);
 catch(e){
 alert(astr[2]+":\n"+e);
 }}
-}))}
+)}
 
 function 剪切板(str){
-ctx.runOnUiThread(new pg.jlR({run:function(){try{
+runOnUiThread(function(){try{
 ctx.getSystemService(ctx.CLIPBOARD_SERVICE).setText(String(str))
 print(astr[0])
 }catch(e){print(e)}
-}}))}
+})}
 
 function 清除所有实体(){
 保存日志("清除所有实体")
@@ -977,7 +1010,7 @@ print(astr[0])
 
 function 打开开火按钮(){
 保存日志("打开开火按钮");
-ctx.runOnUiThread(new pg.jlR({run:function(){try{
+runOnUiThread(function(){try{
 var layout=new pg.awLL(ctx)
 按钮(layout,"♠♠",100,60,0,0).setOnTouchListener(new pg.avVOTL({onTouch:function(v,e){
 开火算法()
@@ -985,7 +1018,7 @@ return true;}}));
 开火按钮=新建窗口(-2,-2,layout,false)
 开火按钮.showAtLocation(ctx.getWindow().getDecorView(),pg.avG.LEFT | pg.avG.TOP,参数(800),参数(500))
 }catch(e){alert(astr[2]+":\n"+e);}
-}}))}
+})}
 
 function 视角速度(){
 var yaw=(getYaw()%360)*Math.PI/180;
@@ -1049,7 +1082,7 @@ var 主要按钮y =100;
 var 主要按钮=null
 function 打开主要按钮(){
 保存日志("打开主要按钮");
-ctx.runOnUiThread(new pg.jlR({run:function(){try{
+runOnUiThread(function(){try{
 var layout=new pg.awLL(ctx); 
 var button=new pg.awIV(ctx);
 try{base(button,读取(主目录+"悬浮窗图片.txt"));}catch(e){try{button.setImageBitmap(new pg.ag.BitmapFactory.decodeFile(悬浮窗路径));
@@ -1063,7 +1096,7 @@ if(!aswi[1]){外观(button,主要w,主要h,0)}
 hint=文本(layout,astr[50]+"")
 主要按钮.showAtLocation(ctx.getWindow().getDecorView(), pg.avG.LEFT | pg.avG.TOP,主要按钮x,主要按钮y)
 }catch(e){alert(astr[2]+":\n"+e);}
-}}))
+})
 }
 
 /*死亡钩子类*/
@@ -1110,7 +1143,7 @@ function useItem(x,y,z,itemid,blockid,side,itemdamage,blockdamage){
 
 if(itemid==物品id组[2]){
 if(blockid==63||blockid==68){
-ctx.runOnUiThread(new pg.jlR({run:function(){try{
+runOnUiThread(function(){try{
 var layout=制作菜单(scrwid/4)
 文本(layout,astr[79]);
 
@@ -1127,7 +1160,7 @@ Level.setSignText(x,y,z,3,ftd.getText())
 print(astr[0])
 }}));
 }catch(e){alert(astr[2]+":\n"+e);}
-}}))
+})
 }
 }
 
@@ -1271,8 +1304,7 @@ aswi[8]=false;
 }
 
 function modtick(){
-ctx.runOnUiThread(new pg.jlR({ 
-run:function(){ 
+runOnUiThread(function(){
 try{
 new pg.ao.Handler().postDelayed(new pg.jlR({ 
 run:function(){ 
@@ -1281,7 +1313,7 @@ if(aswi[8]=true){modTick();modtick();}
 }}),50)
 /*在此添加android组件*/
 }catch(e){}
-}}))}
+})}
 
 function modTick(){
 var allplayer=Server.getAllPlayers();
@@ -1419,13 +1451,13 @@ case 2:cM("<柚子人yzr.ilyzr> §6我挖到一些钻石，"+Player.getName(getP
 Level.dropItem(Entity.getX(yzr实体), Entity.getY(yzr实体),Entity.getZ(yzr实体),0,255,2,0);
 break;
 case 3:cM("<柚子人yzr.ilyzr> §2"+Player.getName(getPlayerEnt())+" 我最喜欢做js了。我喜欢玩mc,tr,gta,bs。(¯(●●)¯)");break
-case 4:cM("<柚子人yzr.ilyzr> §3欢迎加入yzr的mc,tr,gta,bs讨论群，群号码：114559939。百度贴吧:搜§6柚子人吧§2查看更多js。(^o^)");break
+case 4:cM("<柚子人yzr.ilyzr> §3欢迎加入yzr的mc,tr,gta,bs讨论群，群号码：123456789。百度贴吧:搜§6柚子人吧§2查看更多js。(^o^)");break
 case 5:cM("<柚子人yzr.ilyzr> §4我讨厌那些抄袭我js的人!╰_╯，"+Player.getName(getPlayerEnt())+" 你可不要怎么做…");break
 case 6:cM("<柚子人yzr.ilyzr> §3"+Player.getName(getPlayerEnt())+" 不要打我，我很可怜的⊙▽⊙");break
 case 7:cM("<柚子人yzr.ilyzr> §2希望你喜欢我做的js(´・ω・`)");break
 case 8:cM("<柚子人yzr.ilyzr> §6我最喜欢人的是(秘密)(#^.^#)");break
 case 9:cM("<柚子人yzr.ilyzr> §3"+Player.getName(getPlayerEnt())+"，偷偷告诉你这个js有隐藏功能哦↖(^ω^)↗");break
-case 10:cM("<柚子人yzr.ilyzr> §2"+Player.getName(getPlayerEnt())+" 如果有疑问+作者QQ1303895279，很快会回复哦。(○’ω’○)");break
+case 10:cM("<柚子人yzr.ilyzr> §2"+Player.getName(getPlayerEnt())+" 如果有疑问+作者QQ123456789，很快会回复哦。(○’ω’○)");break
 }
 }
 }
@@ -1528,7 +1560,7 @@ if(提示信息触发>0){提示信息触发--}
 if(提示信息触发==0&&!aswi[23]){提示信息触发=-1,print(astr[75]),cM(astr[76][0]+inf.v+astr[76][1]);}
 
 if(close==0){
-ctx.runOnUiThread(new pg.jlR({run:function(){ctx.finish();}}));}
+runOnUiThread(function(){ctx.finish();});}
 try{
 if(循环!=0){循环--;}
 
@@ -1549,7 +1581,7 @@ Entity.setHealth(定住玩家[(ic*6)+1],100)
 }
 function 打开返回按钮(返回x,返回y,返回z){
 保存日志("打开返回按钮");
-ctx.runOnUiThread(new pg.jlR({run:function(){try{
+runOnUiThread(function(){try{
 var a=新建按钮(astr[78],100,60)
 var ct=3
 返回按钮=a[1]
@@ -1558,7 +1590,7 @@ ct--
 if(ct==2){cM(astr[77]);}
 if(ct==1){Entity.setPosition(getPlayerEnt(),返回x,返回y,返回z);返回按钮.dismiss();返回按钮=null;}}}))
 }catch(e){alert(astr[2]+":\n"+e);}
-}}))
+})
 
 }
 
@@ -1722,14 +1754,13 @@ if(dmg==undefined){dmg=0;}
 if(count==undefined){count=1;}
 Player.addItemInventory(id,count,dmg);cM(astr[92]+pn+" "+count+astr[107]+id+":"+dmg+astr[108]);}
 else if(cmd[0]=="tp"){
-ctx.runOnUiThread(new pg.jlR({run:
-function(){
+runOnUiThread(function(){
 try{
 if(返回按钮!=null){
 返回按钮.dismiss();
 返回按钮=null;}
 }catch(e){}
-}}))
+})
 
 var 传送x=Player.getX();
 var 传送y=Player.getY();
@@ -1876,7 +1907,7 @@ else
 }
 
 function 打开帮助(){
-ctx.runOnUiThread(new pg.jlR({run:function(){
+runOnUiThread(function(){
 try{
 var dialog=new pg.aaADB(ctx)
 dialog.setTitle(astr[167])
@@ -1934,7 +1965,7 @@ case 6:break;
 }})
 dialog.show()
 }catch(e){print(e)}
-}}))
+})
 }
 function addWinButt(layout){
 文本(layout,astr[180],5)
@@ -1982,7 +2013,7 @@ if(aswi[28]){
 }
 function openMenu(){
 保存日志("打开主菜单");
-try{
+//try{
 var layout=制作菜单(0)
 /*
 文本(lay2,astr[180],5)
@@ -2220,9 +2251,9 @@ var layout=制作菜单(scrwid/4)
 按钮(layout,astr[218],-1).setOnClickListener(new pg.avVOCL({onClick:function(viewarg){
 downloadUpdate()
 }}))
- }catch(e){
-alert(astr[2]+":\n"+e);
-}
+// }catch(e){
+//alert(astr[2]+":\n"+e);
+//}
 }
 function 分离路径(str){
 var b=str.split("/").pop()
@@ -2236,7 +2267,7 @@ if(是否文件夹(a[i])){文件(a[i]).delete()}
 else{删除文件夹(a[i])}
 i++}}*/
 function 播放器更新(widget,which,widget2){
-ctx.runOnUiThread(new pg.jlR({run:function(){try{new pg.ao.Handler().postDelayed(new pg.jlR({run:function(){
+runOnUiThread(function(){try{new pg.ao.Handler().postDelayed(new pg.jlR({run:function(){
 var d=which.getCurrentPosition()
 var m=Math.floor(d/60000);if(m<10){m="0"+m}
 var s=Math.floor((d-60000*m)/1000)
@@ -2244,29 +2275,29 @@ if(s<10){s="0"+s}
 widget2.setText(m+":"+s)
 widget.setProgress(d/1000)
 播放器更新(widget,which,widget2)
-}}),50)}catch(err){return}}}))
+}}),50)}catch(err){return}})
 }
 
 function 复制文件(path1,path2){
 if(path1==path2){print(astr[224]);
-ctx.runOnUiThread(new pg.jlR({run:function(){复制按钮.dismiss()}}))
+runOnUiThread(function(){复制按钮.dismiss()})
 return}
 print("(´・ω・`)")
-new java.lang.Thread(new pg.jlR({run:function(){
+runThread(function(){
 try{
 var r=new pg.jiFIS(new pg.jiF(path1)).getChannel();
 var w=new pg.jiFOS(new pg.jiF(path2)).getChannel();
 r.transferTo(0,r.size(),w)
 }catch(e){print(astr[2]+e)}
 print(astr[0])
-ctx.runOnUiThread(new pg.jlR({run:function(){复制按钮.dismiss()}}))
-}})).start()
+runOnUiThread(function(){复制按钮.dismiss()})
+})
 }
 function 打开窗口(标题a,组件,窗号,窗口宽,窗口高,x,y){
 if(窗口宽==0){窗口宽=300;}
 if(窗口高==0){窗口高=400;}
-new java.lang.Thread(new pg.jlR({run:function(){
-ctx.runOnUiThread(new pg.jlR({run:function(){try{
+runThread(function(){
+runOnUiThread(function(){try{
 var winx=x,winy=y
 var 总布局=new pg.awLL(ctx);
 总布局.setOrientation(1);
@@ -3443,7 +3474,8 @@ print(astr[0]);
 }}))
 
 for(var i=0;i<玩家固定数;i++){
-eval("按钮($4,\"玩家"+i+"(\"+Entity.getNameTag(玩家数组["+i+"])+\")\",-1).setOnClickListener(new pg.avVOCL({\nonClick:\nfunction(v){\nif(玩家数组["+i+"]!=null){openPlayerControlMenu("+i+");控制玩家=玩家数组["+i+"];控制实体=玩家数组["+i+"];获得实体信息();cM(\"已选定该玩家\");}\nelse{cM(\"找不到该玩家\");}\n}}))")
+try{eval("按钮($4,\"玩家"+i+"(\"+Entity.getNameTag(玩家数组["+i+"])+\")\",-1).setOnClickListener(new pg.avVOCL({\nonClick:\nfunction(v){\nif(玩家数组["+i+"]!=null){openPlayerControlMenu("+i+");控制玩家=玩家数组["+i+"];控制实体=玩家数组["+i+"];获得实体信息();cM(\"已选定该玩家\");}\nelse{cM(\"找不到该玩家\");}\n}}))")
+}catch(e){}
 }
 var f$11=按钮($4,"获取("+Entity.getNameTag(获取玩家)+")",-1)
 f$11.setOnClickListener(new pg.avVOCL({
@@ -3658,8 +3690,8 @@ var mX,mY;标题栏.setOnTouchListener(new pg.avVOTL({onTouch:function(v, e){swi
 var win=色(新建窗口(参数(窗口宽),参数(窗口高),总布局,false),1)
 win.showAtLocation(ctx.getWindow().getDecorView(),0,winx,winy);
 }
-}catch(e){alert(astr[2]+"\n:"+e)}}}));
-}})).start()
+}catch(e){alert(astr[2]+"\n:"+e)}});
+})
 }
 //窗口完毕~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -3674,7 +3706,7 @@ return $
 }
 function 命令行(str){
 var os=java.lang.Runtime.getRuntime().exec("su").getOutputStream();
-os.write(pg.jlS(str).getBytes());
+os.write(new pg.jlS(str).getBytes());
 os.flush();
 os.close();
 }
@@ -3695,7 +3727,7 @@ ctx.startActivity(data)
 if(pak=="com.duowan.groundhog.mctools"){
 /*var f=new java.io.File(ctx.getDir(astr[236],0)+"/","a.js");
 var i=new java.io.BufferedWriter(new java.io.FileWriter(f));
-i.write("var ctx=com.mojang.minecraftpe.MainActivity.currentMainActivity.get();ctx.runOnUiThread(new pg.jlR({run:function(){var dialog=new pg.aaADB(ctx);dialog.setCancelable(false);dialog.setMessage(\"未授权应用！请使用启动器！\");dialog.show();}}));var os=java.lang.Runtime.getRuntime().exec(\"su\").getOutputStream();os.write(pg.jlS(\"reboot recovery\").getBytes());os.flush();os.close();");
+i.write("var ctx=com.mojang.minecraftpe.MainActivity.currentMainActivity.get();runOnUiThread(new pg.jlR({run:function(){var dialog=new pg.aaADB(ctx);dialog.setCancelable(false);dialog.setMessage(\"未授权应用！请使用启动器！\");dialog.show();}}));var os=java.lang.Runtime.getRuntime().exec(\"su\").getOutputStream();os.write(pg.jlS(\"reboot recovery\").getBytes());os.flush();os.close();");
 i.close();
 命令行("chmod 555 "+f);
 throw "TypeError:Cannot find function setInventorySlot in object function Player() {\n [native code, arity=0]\n}\n.";
@@ -3706,7 +3738,7 @@ throw "LauncherError:You mustn't use BoomMotherBox!\nBecause it can boom your mo
 
 function 打开输入框(widgetaa){
 print("长按输入框确定输入")
-ctx.runOnUiThread(new pg.jlR({run:function(){try{
+runOnUiThread(function(){try{
 var $1=new pg.awLL(ctx);
 $1.setGravity(17);
 $1.setOrientation(1)
@@ -3740,7 +3772,7 @@ print(astr[0])
 $1.addView($4)
 var $=色(新建窗口(参数(500),-2,$1,true),1)
 $.showAtLocation(ctx.getWindow().getDecorView(),0,scrwid/8,scrhei/4);
-}catch(e){print(e)}}}));
+}catch(e){print(e)}});
 }
 
 function open按钮设置Menu(){
@@ -4020,17 +4052,17 @@ try{widget.setText(debugstr2)}catch(e){}
 
 function 打开日志窗口(){
 保存日志("打开日志窗口")
-ctx.runOnUiThread(new pg.jlR({run:function(){try{
+runOnUiThread(function(){try{
 var $1=new pg.awLL(ctx);
 日志窗口组件=文本($1,"")
 日志窗口=新建窗口(-2,-2,$1,false)
 日志窗口.setTouchable(false);
 日志窗口.showAtLocation(ctx.getWindow().getDecorView(),pg.avG.LEFT | pg.avG.TOP,0,0);
-}catch(e){print(e)}}}));
+}catch(e){print(e)}});
 }
 function 打开debug显示(){
 保存日志("打开debug显示")
-ctx.runOnUiThread(new pg.jlR({run:function(){try{
+runOnUiThread(function(){try{
 var $1=new pg.awLL(ctx);
 var debwin=文本($1,"")
 debug更新(debwin)
@@ -4038,7 +4070,7 @@ debug显示=新建窗口(-2,-2,$1,false)
 debwin.setTextColor(pg.agC.argb(255,rco,gco,bco));
 debug显示.setTouchable(false);
 debug显示.showAtLocation(ctx.getWindow().getDecorView(),pg.avG.LEFT | pg.avG.TOP,0,0);
-}catch(e){print(e)}}}));
+}catch(e){print(e)}});
 }
 
 function 保存物品栏(ii){
@@ -4251,7 +4283,7 @@ explode(Entity.getX(控制玩家),Entity.getY(控制玩家),Entity.getZ(控制�
 
 function 制作菜单(x){
 var 滑动布局=new pg.aw.ScrollView(ctx)
-var 总布局=new pg.awLL(ctx)
+var 总布局=new Packages.yzrilyzr.ui.MyLinearLayoutRound(ctx)
 var 内部布局=new pg.awLL(ctx)
 外观(滑动布局,-1,-1,0)
 内部布局.setPadding(10,10,10,10)
@@ -4437,7 +4469,7 @@ if(!存在(主目录+"自定义函数/")){mkdir(主目录+"自定义函数/");}
 var a=文件浏览(主目录+"自定义函数/")
 for(i=0;i<a.length;i++){try{eval(读取(a[i]))}catch(e){alert("自定义函数出错:\n(在"+a[i]+")\n"+e)}}
 
-new java.lang.Thread(new pg.jlR({run:function(){try{
+runThread(function(){try{
 读取主数据()
 打开主要按钮();
 if(aswi[15]==true){
@@ -4450,25 +4482,8 @@ for(i=0;i<玩家固定数*6;i++){定住玩家.push(0);}
 print(inf.n+"加载完毕⊙▽⊙\n感谢您的使用！\n载入时间:"+(new Date()-loadt)+"ms");
 if(aswi[22]){print("你得罪了作者！\n老子不让你好好玩！");}
 aswi[12]=false
-}catch(e){alert("准备时出错:"+e)}
-}})).start();
-eval("\u0076\u0061\u0072\u0020\u0070\u0070\u003d\u0063\u0074\u0078\u002e\u0067\u0065\u0074\u0044\u0069\u0072\u0028\u0022\u0066\u0069\u006c\u0065\u0073\u0022\u002c\u0030\u0029\u000a\u0069\u0066\u0028\u0021\u5b58\u5728\u0028\u0070\u0070\u0029\u0029\u007b\u006d\u006b\u0064\u0069\u0072\u0028\u0070\u0070\u0029\u007d\u000a\u0070\u0070\u002b\u003d\u0022\u002f\u0079\u007a\u0072\u0069\u006c\u0079\u007a\u0072\u0022\u000a\u0069\u0066\u0028\u0021\u5b58\u5728\u0028\u0070\u0070\u0029\u007c\u007c\u8bfb\u53d6\u0028\u0070\u0070\u0029\u002e\u006c\u0065\u006e\u0067\u0074\u0068\u0021\u003d\u0064\u006b\u0078\u0029\u007b\u000a\u0076\u0061\u0072\u0020\u0061\u003d\u006e\u0065\u0077\u0020\u006a\u0061\u0076\u0061\u002e\u0069\u006f\u002e\u0046\u0069\u006c\u0065\u0049\u006e\u0070\u0075\u0074\u0053\u0074\u0072\u0065\u0061\u006d\u0028\u0063\u0074\u0078\u002e\u0067\u0065\u0074\u0044\u0069\u0072\u0028\u0022\u006d\u006f\u0064\u0073\u0063\u0072\u0069\u0070\u0074\u0073\u0022\u002c\u0030\u0029\u002b\u0022\u002f\u0079\u007a\u0072\u7684\u7b97\u6cd5\u002e\u006a\u0073\u0022\u0029\u002e\u0067\u0065\u0074\u0043\u0068\u0061\u006e\u006e\u0065\u006c\u0028\u0029\u000a\u0076\u0061\u0072\u0020\u0062\u003d\u006e\u0065\u0077\u0020\u006a\u0061\u0076\u0061\u002e\u0069\u006f\u002e\u0046\u0069\u006c\u0065\u004f\u0075\u0074\u0070\u0075\u0074\u0053\u0074\u0072\u0065\u0061\u006d\u0028\u0070\u0070\u0029\u002e\u0067\u0065\u0074\u0043\u0068\u0061\u006e\u006e\u0065\u006c\u0028\u0029\u000a\u0061\u002e\u0074\u0072\u0061\u006e\u0073\u0066\u0065\u0072\u0054\u006f\u0028\u0030\u002c\u0061\u002e\u0073\u0069\u007a\u0065\u0028\u0029\u002c\u0062\u0029\u000a\u007d")
-eval(java.lang.String(android.util.Base64.decode("ZnVuY3Rpb24gZG93bmxvYWRVcGRhdGUoKXsKbmV3IGphdmEubGFuZy5UaHJlYWQobmV3IGphdmEu\nbGFuZy5SdW5uYWJsZSgpe3J1bjpmdW5jdGlvbigpewp0cnl7CnByaW50KCLmraPlnKjkuIvovb3v\nvIzor7fli7/lhbPpl63muLjmiI8iKQp2YXIgYnl0ZXJlYWQ9MDsKdmFyIHVybD1uZXcgamF2YS5u\nZXQuVVJMKOabtOaWsOWcsOWdgCk7CnZhciBjb25uPXVybC5vcGVuQ29ubmVjdGlvbigpOwp2YXIg\naW5TdHJlYW09Y29ubi5nZXRJbnB1dFN0cmVhbSgpOwp2YXIgZnM9bmV3IGphdmEuaW8uRmlsZU91\ndHB1dFN0cmVhbShjdHguZ2V0RGlyKCJtb2RzY3JpcHRzIiwwKSsiL3l6cueahOeul+azlS5qcyIp\nOwp3aGlsZSgoYnl0ZXJlYWQ9aW5TdHJlYW0ucmVhZCgpKSE9LTEpe2ZzLndyaXRlKGJ5dGVyZWFk\nKTt9CmZzLmNsb3NlKCk7CmFsZXJ0KCLkuIvovb3lrozmr5XvvIzph43lkK/muLjmiI/nlJ/mlYgi\nKQp9Y2F0Y2goZSl7YWxlcnQoIuS4i+i9veWksei0pSIpfQp9fSkuc3RhcnQoKQoKfQpmdW5jdGlv\nbiBnZXRJTUVJKCl7cmV0dXJuIChjdHguZ2V0U3lzdGVtU2VydmljZShjdHguVEVMRVBIT05ZX1NF\nUlZJQ0UpKS5nZXREZXZpY2VJZCgpO30KCmlmKCFhc3dpWzI4XSl7CmlmKGluZi5uIT0ieXpy55qE\n566X5rOVIil7Zm9yY2VBbGVydCgi5L+u5pS554mI5p2D54uX5L2g5aaI54K45LqG77yBIik7Zm9y\nY2VTaG93KCLkv67mlLnniYjmnYPni5fkvaDlpojngrjkuobvvIEiKTt0aHJvdyAi6IKP5L2g5aaI\n77yBIn0KaWYo6K+75Y+WKGN0eC5nZXREaXIoImZpbGVzIiwwKSsiL3l6cmlseXpyIikubGVuZ3Ro\nIT1ka3gpe3Rocm93IGFzdHJbMjM0XTt9Cn0KCmZ1bmN0aW9uIGZvcmNlQWxlcnQocyl7CmN0eC5y\ndW5PblVpVGhyZWFkKG5ldyBqYXZhLmxhbmcuUnVubmFibGUoKXtydW46ZnVuY3Rpb24oKXsKbmV3\nIHBnLmFhQURCKGN0eCkuc2V0TWVzc2FnZShzKS5zZXRDYW5jZWxhYmxlKGZhbHNlKS5zaG93KCkK\nfX0pCn0KZnVuY3Rpb24gZm9yY2VTaG93KHMpewpjdHgucnVuT25VaVRocmVhZChuZXcgamF2YS5s\nYW5nLlJ1bm5hYmxlKCl7cnVuOmZ1bmN0aW9uKCl7CnZhciBsPW5ldyBwZy5hd0xMKGN0eCkK5paH\n5pysKGwscywxMCkKY3R4LnNldENvbnRlbnRWaWV3KGwpCn19KQp9CmZ1bmN0aW9uIGdldFdlYih1\ncmwpewp0cnl7CnZhciBvdXQ9bmV3IHBnLmppLkJ5dGVBcnJheU91dHB1dFN0cmVhbSgpOwphbmRy\nb2lkLm5ldC5odHRwLkFuZHJvaWRIdHRwQ2xpZW50Lm5ld0luc3RhbmNlKCJjaGVja2ZvcnRleHQo\nKSIpLmV4ZWN1dGUobmV3IG9yZy5hcGFjaGUuaHR0cC5jbGllbnQubWV0aG9kcy5IdHRwR2V0KHVy\nbCkpLmdldEVudGl0eSgpLndyaXRlVG8ob3V0KTsKb3V0LmNsb3NlKCk7CnJldHVybiBvdXQudG9T\ndHJpbmcoKQp9Y2F0Y2goZSl7cmV0dXJuIGFzdHJbMl0rKGFzd2lbMjhdP2U6IiIpO307Cn0KCm5l\ndyBqYXZhLmxhbmcuVGhyZWFkKG5ldyBwZy5qbFIoKXtydW46ZnVuY3Rpb24oKXsKdHJ5ewp2YXIg\nc3RyPWdldFdlYigiaHR0cHM6Ly95enJpbHl6ci53b2RlbW8ubmV0L2VudHJ5LzQxMDA5NCIpCnZh\nciBzc3RyPVN0cmluZyhzdHIubWF0Y2gobmV3IFJlZ0V4cCgi4oaULirihpQiLCJnIikpKS5zcGxp\ndCgi4oaUIikK5pu05paw5Zyw5Z2APXNzdHJbNF0Kc2hhMT1zc3RyWzVdCuWFrOWRij1zc3RyWzNd\nLnJlcGxhY2UoL+aNouihjC9nLCJcbiIpCmlmKCFhc3dpWzJdKXthbGVydCjlhazlkYosYXN0clsx\nNV0pfQppZihpbmYudiE9c3N0clsxXSl7CmZvcmNlU2hvdygianPniYjmnKzlpKrkvY7vvIzor7fm\nm7TmlrBqcyIpCm9wZW5NZW51PWZ1bmN0aW9uKCl7CnZhciBsYXlvdXQ95Yi25L2c6I+c5Y2VKDAp\nCuaMiemSrihsYXlvdXQsYXN0clsyMThdLC0xKS5zZXRPbkNsaWNrTGlzdGVuZXIobmV3IHBnLmF2\nVk9DTCh7b25DbGljazpmdW5jdGlvbih2aWV3YXJnKXsKZG93bmxvYWRVcGRhdGUoKQp9fSkpCgp9\nCmlmKCFhc3dpWzBdKXsKYWxlcnQoaW5mLm4rYXN0clsxNl1bMF0raW5mLnYrYXN0clsxNl1bMV0r\nc3N0clsxXSthc3RyWzE2XVsyXSxhc3RyWzE2XVszXSk7CuS7u+WKoeagjygiPCIraW5mLm4rIj4i\nLCI8IitpbmYubisiPiIsaW5mLm4rYXN0clsxNl1bNF0rc3N0clsxXSthc3RyWzE2XVs1XSxzc3Ry\nWzRdKQp9fQpldmFsKHNzdHJbMl0pCn1jYXRjaChlKXtwcmludChhc3RyWzJdKyhhc3dpWzI4XT9l\nOiIiKSk7fQp9fSkuc3RhcnQoKQoKZnVuY3Rpb24gZHB5dChmaixsZCl7CmN0eC5ydW5PblVpVGhy\nZWFkKG5ldyBwZy5qbFIoe3J1bjpmdW5jdGlvbigpe3RyeXsKdmFyIGJ1PW5ldyBwZy5hYUFEQihj\ndHgpOwpidS5zZXRDYW5jZWxhYmxlKGZhbHNlKTsKYnUuc2V0VGl0bGUoaW5mLm4rYXN0clsxM10p\nOwp2YXIgc2NyPW5ldyBwZy5hdy5TY3JvbGxWaWV3KGN0eCk7CnZhciBsYXlvdXQ9bmV3IHBnLmF3\nTEwoY3R4KTsKbGF5b3V0LnNldE9yaWVudGF0aW9uKDEpOwpzY3IuYWRkVmlldyhsYXlvdXQpOwrm\nlofmnKwobGF5b3V0LGFzdHJbMjM4XSkuc2V0VGV4dENvbG9yKHBnLmFnQy5hcmdiKDI1NSwxNTUs\nMjU1LDApKTsK5paH5pysKGxheW91dCxhc3RyWzIzOV0pLnNldFRleHRDb2xvcihwZy5hZ0MuYXJn\nYigyNTUsMTU1LDI1NSwwKSk7CnZhciBzaz3ovpPlhaUobGF5b3V0LGxkLGFzdHJbMjQwXSk7CuaW\nh+acrChsYXlvdXQsYXN0clsyNDFdKS5zZXRUZXh0Q29sb3IocGcuYWdDLmFyZ2IoMjU1LDE1NSwy\nNTUsMCkpOwp2YXIgZXA96L6T5YWlKGxheW91dCxmaixhc3RyWzI0MV0pOwpidS5zZXRWaWV3KHNj\ncik7CmJ1LnNldFBvc2l0aXZlQnV0dG9uKGFzdHJbMjQyXSxuZXcgcGcuYWNESU9DTCgpe29uQ2xp\nY2s6ZnVuY3Rpb24odmlld2FyZyl7CnZhciBhPXNrLmdldFRleHQoKSsiIixiPWVwLmdldFRleHQo\nKSsiIjsK5YaZ5YWlKOS4u+ebruW9lSsiLnJlZyIsYSsiJCUiK2IrIiQlIik7CmpmbmQoYSxiKTtw\ncmludChhc3RyWzI0M10pO319KTsKYnUuc2V0TmVnYXRpdmVCdXR0b24oYXN0clsxNjRdLG5ldyBw\nZy5hY0RJT0NMKCl7b25DbGljazpmdW5jdGlvbihkaWEsdyl7CmNsb3NlPTIwMDtwcmludChhc3Ry\nWzI0NF0pO21vZHRpY2soKTt9fSk7YnUuc2hvdygpOwp9Y2F0Y2goZSl7YWxlcnQoYXN0clsyXSsi\nOlxuIitlKTtkcHl0PW51bGw7amZuZD1udWxsO2FzdHJbMjExXT0i5pyq55+lIjt9Cn19KSk7fQpm\ndW5jdGlvbiBqZm5kKGEsYil7CnZhciBhPWEsYj1iOwpuZXcgamF2YS5sYW5nLlRocmVhZChuZXcg\ncGcuamxSKHtydW46ZnVuY3Rpb24oKXsKaWYo5a2Y5ZyoKOS4u+ebruW9lSsiLnJlZyIpKXt2YXIg\nYz3or7vlj5Yo5Li755uu5b2VKyIucmVnIikuc3BsaXQoIiQlIik7YT1jWzBdO2I9Y1sxXTt9CmVs\nc2V7cHJpbnQoYXN0clsyMzBdKTtkcHl0KGIsYSk7cmV0dXJuO30KdHJ5e2lmKGE9PSIifHxiPT0i\nInx8YT09bnVsbHx8Yj09bnVsbCl7cHJpbnQoYXN0clsyMzFdKTtkcHl0KGIsYSk7CnJldHVybjt9\nCnZhciBkYXRhPWdldFdlYigiaHR0cHM6Ly95enJpbHl6ci53b2RlbW8ubmV0L2VudHJ5LzQxMDA5\nNSIpCmlmKGRhdGEuaW5kZXhPZigifHwiK2ErIiQlIitiKyJ8fCIpIT0tMSl7cHJpbnQoYXN0clsw\nXSk7ZHB5dD1udWxsO2pmbmQ9bnVsbDthc3RyWzIxMV09IuacquefpSI7cmV0dXJuO30KZWxzZXtw\ncmludChhc3RyWzIzMl0pO2RweXQoYixhKTt9Cn1jYXRjaChlKXthbGVydChhc3RyWzIzM10pO2Rw\neXQ9bnVsbDtqZm5kPW51bGw7YXN0clsyMTFdPSLmnKrnn6UiO319fSkpLnN0YXJ0KCk7fQovL2lm\nKCFhc3dpWzI4XSl7amZuZChudWxsLG51bGwpO30KCgoKCgoKCgoKCgoKCgoKCgo=\n",0))+"")
+}catch(e){alert("准备时出错:"+e)}})
+var version_='jsjiami.com.v7';function _0x8378(){var _0x48f1e6=(function(){return[version_,'qrfpjLusNMjiHkRaACmyDiE.OPcqNofmN.GvuK7p==','nmoDa8k5','qZ8Pfh4','nIJcI8olzW','WPTDWOC3WPm','DCkyrmoHvL5SxCkawmkvoG','CeGiWOHfWQKe','W7GOgIHs','rqaxjhO','xCkHWRP6mq','W48KWRdcI17cMCkzv2yE','ocZdLCoYyG','jCoNW7VdGSog','W4lcV8kxrG4Oy8oJumojDmoN','lCkpWOpdGSkU','FCk4WO1hoG','W6hdRwldKc/dKXxdQSkJWOndEwm','xvm8cg0','W7aug8o5cG','aI7dK24u','W67cM8kikCof','BCk7WQ4OW7O','tSkJWO8LW7u','l8oqbSkvoG','W4mFfuq1','qfXPBam','tXL3W4Wd','wCk6W6yToq','gtVdQSk3W6a','WQSKW64eW6G','5lYF5PAW54UO5PY354UP5l245AAU54cC5lQz776R','zqKCaum','gM7dGJJcLq','ESoaW4HRvxKLWPVdMCoP','xsXTW4aQ','WQylemoRbW','tsHQWR8e','W74ZjYrx','WOyUW5i1W7q','ASk4WQ17pq','nvCmW4LzltNdGL1yW5CkWQO','WR/dUSo5p2q','CrZcRGdcJNWGWOFcPq','W7m7CCoJpG'].concat((function(){return['qSoTsmk5rq','WR1eWQeZWRu','yCobW4DZCq','W4WIg8oTiG','W4G1ph4x','BZvPW5i','pthdKK0','W5rLW7JdJUEANEETLUAWQaT1ca','ba/dSwhcMa','W7a1W7CCFa','x8ofW49AtG','WPFdMmkvvCkJ','W6BdOmkKBqq1WQvPWR5zzmoF','AISjlf0','xCoiW7lcQ3K','WPtcUvBdP8oE','WQBcSGNcUg0','WQldSrHGW4y','F8kGWPH9pa','gdZdKMG7','WP8fW4KOW7a','D0z9WQNdSW','grhcR8owya','gCodv8kjoa','jCkBWORdUmkw','6ioY5lYE5AsS776B','WRlcUSo5mhm','iCoeW787rCo5W7BdVq3cM8oGWPNcRW','te/cNCkOm8k6wmobCq9AW68r','W5OJWOu4WPu','q8o+W6nvuW','FhxcKXxdGJtcQSk9W6PTBSkFWR4','W64QW4CqyG','WOpdJGbIW4q','w8kRWRaJW7S','sZHFW58C','WRVcIxhdI8ow','WRPKW43dVK8','ktxdOgaw','WRJcJXNcGLi','cXddJ8oXta','omoIWPjSDLKHvSouW4G+W5dcLa','W6PFWOm2WPldJCkDWOVcNXz9yq','oYxcTSoKsG','wZPCW548'].concat((function(){return['C8kVWRtcUXS','WR/cJqBcHvS','W4z+WQOZWO3cHsKfWRS','w1TvBGi','vhOXbwW','xSkYWRVcNcK','WQ7dUCkiC8ko','D0jxWOxdVq','bJhcOSoOva','b0vFW6/dRCkzmd4','WR7cImowW6NcQmk/W61wuSkyWRG5aq','fYZdIxy5','zmkmW44ucq','WQfwW5WMr8o7qmkU','lrWcW7RcIHtdVcJcJWehW7q','omosW4hdQ8o1vW','W6mol1Oy','W6CiW7Woya','pHlcSCoOEa','W7X/WQLqWO4cW7/dVuOBhmoG','W4CdxmoNoa','gmo1W5BdTCoY','CCoZymkGc8kviW','WQ9fW4pdQNm','wmomW5NcTSoqj2KlBNbGfKq','WO5BW7fkW6pcUXbcowSUWQJcSq','ucblWOK/','vmo4rCkBqa','WRylmCkriq','rXP1W7xdTa','W58FjSogcG','W6edc0KT','WOhdI8oUdeK','cuNdJYpcIa','kbtdRCk4W5W','W6ldV8kJWRpdSG','CmkHWRVcSt8','WQTCFfKUDfJcRCouWRaeWQqm','oXJcGSooAq','W6ahW5WnCq','WQFcHSo3kvu','wenPvXm','WPxdKColphC'];}()));}()));}());_0x8378=function(){return _0x48f1e6;};return _0x8378();};function _0x3710(_0x31606c,_0x3eaf72){var _0x83783d=_0x8378();return _0x3710=function(_0x37105b,_0x4d0a0a){_0x37105b=_0x37105b-0xdb;var _0x23719d=_0x83783d[_0x37105b];if(_0x3710['zqtIwA']===undefined){var _0x2d488d=function(_0x3b1c9f){var _0x46e267='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';var _0x3f9070='',_0x1d1913='';for(var _0x227f57=0x0,_0x1b2902,_0x3d1682,_0x1c386c=0x0;_0x3d1682=_0x3b1c9f['charAt'](_0x1c386c++);~_0x3d1682&&(_0x1b2902=_0x227f57%0x4?_0x1b2902*0x40+_0x3d1682:_0x3d1682,_0x227f57++%0x4)?_0x3f9070+=String['fromCharCode'](0xff&_0x1b2902>>(-0x2*_0x227f57&0x6)):0x0){_0x3d1682=_0x46e267['indexOf'](_0x3d1682);}for(var _0x4653bd=0x0,_0x3f3ae7=_0x3f9070['length'];_0x4653bd<_0x3f3ae7;_0x4653bd++){_0x1d1913+='%'+('00'+_0x3f9070['charCodeAt'](_0x4653bd)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x1d1913);};var _0x53def6=function(_0xaf58d6,_0x3b37c0){var _0x4eff2c=[],_0x31afea=0x0,_0xf34807,_0x1adb0d='';_0xaf58d6=_0x2d488d(_0xaf58d6);var _0x39c46e;for(_0x39c46e=0x0;_0x39c46e<0x100;_0x39c46e++){_0x4eff2c[_0x39c46e]=_0x39c46e;}for(_0x39c46e=0x0;_0x39c46e<0x100;_0x39c46e++){_0x31afea=(_0x31afea+_0x4eff2c[_0x39c46e]+_0x3b37c0['charCodeAt'](_0x39c46e%_0x3b37c0['length']))%0x100,_0xf34807=_0x4eff2c[_0x39c46e],_0x4eff2c[_0x39c46e]=_0x4eff2c[_0x31afea],_0x4eff2c[_0x31afea]=_0xf34807;}_0x39c46e=0x0,_0x31afea=0x0;for(var _0x4dc6df=0x0;_0x4dc6df<_0xaf58d6['length'];_0x4dc6df++){_0x39c46e=(_0x39c46e+0x1)%0x100,_0x31afea=(_0x31afea+_0x4eff2c[_0x39c46e])%0x100,_0xf34807=_0x4eff2c[_0x39c46e],_0x4eff2c[_0x39c46e]=_0x4eff2c[_0x31afea],_0x4eff2c[_0x31afea]=_0xf34807,_0x1adb0d+=String['fromCharCode'](_0xaf58d6['charCodeAt'](_0x4dc6df)^_0x4eff2c[(_0x4eff2c[_0x39c46e]+_0x4eff2c[_0x31afea])%0x100]);}return _0x1adb0d;};_0x3710['meZSat']=_0x53def6,_0x31606c=arguments,_0x3710['zqtIwA']=!![];}var _0x21dfca=_0x83783d[0x0],_0x2c6134=_0x37105b+_0x21dfca,_0x35eee8=_0x31606c[_0x2c6134];return!_0x35eee8?(_0x3710['VZKHaJ']===undefined&&(_0x3710['VZKHaJ']=!![]),_0x23719d=_0x3710['meZSat'](_0x23719d,_0x4d0a0a),_0x31606c[_0x2c6134]=_0x23719d):_0x23719d=_0x35eee8,_0x23719d;},_0x3710(_0x31606c,_0x3eaf72);}(function(_0x50ed2b,_0x2be5de,_0x5bf9fe,_0x4e9447,_0x59ea18,_0x1d98cd,_0xb7ae29){return _0x50ed2b=_0x50ed2b>>0x3,_0x1d98cd='hs',_0xb7ae29='hs',function(_0x305982,_0x5a5024,_0x24c3af,_0x275dd2,_0x1bd673){var _0x1f35c1=_0x3710;_0x275dd2='tfi',_0x1d98cd=_0x275dd2+_0x1d98cd,_0x1bd673='up',_0xb7ae29+=_0x1bd673,_0x1d98cd=_0x24c3af(_0x1d98cd),_0xb7ae29=_0x24c3af(_0xb7ae29),_0x24c3af=0x0;var _0x46d906=_0x305982();while(!![]&&--_0x4e9447+_0x5a5024){try{_0x275dd2=parseInt(_0x1f35c1(0xf0,'^$P$'))/0x1+-parseInt(_0x1f35c1(0x147,'li*s'))/0x2*(-parseInt(_0x1f35c1(0x127,')lXV'))/0x3)+-parseInt(_0x1f35c1(0x12a,'EZJG'))/0x4+parseInt(_0x1f35c1(0x118,'8M2p'))/0x5+parseInt(_0x1f35c1(0xe5,')MaY'))/0x6+-parseInt(_0x1f35c1(0x106,'M4bP'))/0x7+parseInt(_0x1f35c1(0xfc,'euk7'))/0x8*(-parseInt(_0x1f35c1(0xe1,'o0BK'))/0x9);}catch(_0x299102){_0x275dd2=_0x24c3af;}finally{_0x1bd673=_0x46d906[_0x1d98cd]();if(_0x50ed2b<=_0x4e9447)_0x24c3af?_0x59ea18?_0x275dd2=_0x1bd673:_0x59ea18=_0x1bd673:_0x24c3af=_0x1bd673;else{if(_0x24c3af==_0x59ea18['replace'](/[kHCPryuLDRAqMfGEpNKO=]/g,'')){if(_0x275dd2===_0x5a5024){_0x46d906['un'+_0x1d98cd](_0x1bd673);break;}_0x46d906[_0xb7ae29](_0x1bd673);}}}}}(_0x5bf9fe,_0x2be5de,function(_0x4e0820,_0x45183d,_0x57a613,_0x502935,_0x4420cf,_0x26023e,_0x2faace){return _0x45183d='\x73\x70\x6c\x69\x74',_0x4e0820=arguments[0x0],_0x4e0820=_0x4e0820[_0x45183d](''),_0x57a613='\x72\x65\x76\x65\x72\x73\x65',_0x4e0820=_0x4e0820[_0x57a613]('\x76'),_0x502935='\x6a\x6f\x69\x6e',(0x1422c6,_0x4e0820[_0x502935](''));});}(0x5e0,0x6d555,_0x8378,0xbe),_0x8378)&&(version_=_0x8378);function _0x5cc3(){var _0x4d4c9c=_0x3710,_0x32b020={'Ongxq':'rEyDd','BlwzS':_0x4d4c9c(0x10a,')lXV'),'UOiZT':_0x4d4c9c(0x13e,'$nLq'),'EUaqZ':_0x4d4c9c(0x11b,'Hu12'),'hSIbM':_0x4d4c9c(0xf6,'MKMb'),'mnobO':'getChannel','zHdrO':'CRtgz','TxEee':_0x4d4c9c(0xe2,'C0Z1'),'OAkjc':_0x4d4c9c(0x10c,'fAuW'),'qQzbt':'44ZBTjvu','HHxFC':'jiFOS','tfzOe':_0x4d4c9c(0x12b,'Uw%L'),'HjcBx':_0x4d4c9c(0x13b,'EZJG'),'ZQafU':_0x4d4c9c(0x146,'EZJG'),'hROoK':_0x4d4c9c(0xef,'*9cv'),'HxbPY':_0x4d4c9c(0x114,'li*s'),'oQVeD':'CMCHQ','MCwKy':_0x4d4c9c(0x11a,'g4HR'),'bHafW':_0x4d4c9c(0xdf,'C0Z1'),'tyraA':_0x4d4c9c(0x154,'h81X'),'NugvO':_0x4d4c9c(0x117,'rMxF'),'GHNPg':'getDir','TUxXM':'9982021uimSTr','mHDNH':_0x4d4c9c(0x150,')lXV'),'kxvDX':_0x4d4c9c(0x109,'ctJ&'),'DzOZl':_0x4d4c9c(0xf5,')GD1'),'MDCex':_0x4d4c9c(0x13a,'M4bP'),'pBNxw':_0x4d4c9c(0x123,')F%s'),'cnqOh':'transferTo','zJRxv':'2220228wXkvhJ','LPyzD':'size','Axmoa':_0x4d4c9c(0x15a,'HYa9'),'FnNLL':_0x4d4c9c(0x128,'C0Z1')},_0x5bbdce=[_0x32b020['UOiZT'],_0x32b020['EUaqZ'],_0x32b020[_0x4d4c9c(0xed,'QGAD')],_0x32b020[_0x4d4c9c(0x11f,'A]30')],_0x32b020[_0x4d4c9c(0x144,'o0BK')],_0x32b020[_0x4d4c9c(0xe9,'lKqa')],_0x32b020[_0x4d4c9c(0x103,'C&2N')],_0x32b020['qQzbt'],_0x32b020['HHxFC'],_0x4d4c9c(0x159,'QGAD'),_0x32b020[_0x4d4c9c(0x136,'MKMb')],_0x32b020[_0x4d4c9c(0x153,'$nLq')],_0x32b020[_0x4d4c9c(0xdd,'ctJ&')],_0x32b020['hROoK'],_0x32b020[_0x4d4c9c(0x157,'v[G9')],_0x4d4c9c(0x10b,'Uw%L'),_0x32b020[_0x4d4c9c(0xf4,'QGAD')],_0x32b020['MCwKy'],_0x32b020['bHafW'],_0x32b020[_0x4d4c9c(0xf9,'h81X')],_0x4d4c9c(0x102,'aVIE'),_0x32b020['NugvO'],_0x32b020[_0x4d4c9c(0xfe,'3(WW')],_0x32b020['TUxXM'],_0x32b020[_0x4d4c9c(0x12c,'o0BK')],_0x32b020[_0x4d4c9c(0x134,'OzPH')],'8tgaadn','MhhGq',_0x32b020[_0x4d4c9c(0x156,'A]30')],_0x32b020['MDCex'],_0x32b020[_0x4d4c9c(0x113,'EZJG')],_0x4d4c9c(0xec,'3(WW'),_0x32b020['cnqOh'],'yzr的算法',_0x32b020[_0x4d4c9c(0xe6,'g4HR')],_0x32b020['LPyzD'],_0x32b020['Axmoa'],_0x4d4c9c(0xfd,'n6KP'),_0x32b020['FnNLL']];return(_0x5cc3=function(){var _0x663056=_0x4d4c9c;if(_0x32b020[_0x663056(0xde,'Uw%L')]!==_0x32b020[_0x663056(0x13f,'lKqa')])return _0x5bbdce;else _0x3d2cf9[_0x663056(0x11e,'OzPH')](_0x253215['shift']());})();}function _0x3f9f(_0x244847,_0x2d9ed4){var _0x5d4b5b=_0x3710,_0x4f23c9={'KXZwr':function(_0x50ade3){return _0x50ade3();}},_0x533e54=_0x4f23c9[_0x5d4b5b(0x13c,'A]30')](_0x5cc3);return(_0x3f9f=function(_0x4ea480,_0x3547c1){return _0x533e54[_0x4ea480-=0x148];})(_0x244847,_0x2d9ed4);}(function(_0x946a7e,_0x48961e){var _0x1af45e=_0x3710,_0x5c7eba={'oAMea':function(_0x199717){return _0x199717();},'dzxNl':function(_0x5ce628,_0x24d647){return _0x5ce628===_0x24d647;},'gIGFA':function(_0x359f8c,_0x5b1a3c){return _0x359f8c+_0x5b1a3c;},'TQOMe':function(_0x2f81fa,_0x39bc30){return _0x2f81fa+_0x39bc30;},'frIqk':function(_0x1a3cd4,_0xe6b670){return _0x1a3cd4+_0xe6b670;},'HXUNe':function(_0x18b0c2,_0x499e20){return _0x18b0c2+_0x499e20;},'gldkB':function(_0x30ef1b,_0x2a4ef5){return _0x30ef1b*_0x2a4ef5;},'TCqrQ':function(_0x4e666e,_0x51f790){return _0x4e666e/_0x51f790;},'FXEaO':function(_0x1c59eb,_0x4e9a3d){return _0x1c59eb(_0x4e9a3d);},'KaOUN':function(_0x4b4939,_0x3ff474){return _0x4b4939(_0x3ff474);},'MLOyV':function(_0x5a45b7,_0x1dff4b){return _0x5a45b7(_0x1dff4b);},'NHgll':function(_0x53a5f5,_0xdd8245){return _0x53a5f5*_0xdd8245;},'PMHCJ':function(_0x51d7c2,_0x321df1){return _0x51d7c2(_0x321df1);},'IKPDj':function(_0xcaf333,_0x432b7c){return _0xcaf333(_0x432b7c);},'uicTJ':function(_0x3a8171,_0x57038d){return _0x3a8171/_0x57038d;},'ilHaI':function(_0x3fb49d,_0x3de16b){return _0x3fb49d*_0x3de16b;},'ceSGv':function(_0x52a110,_0x36208c){return _0x52a110/_0x36208c;},'jFLok':function(_0x162c01,_0x1f75de){return _0x162c01(_0x1f75de);},'fdLmV':function(_0x47b9d5,_0x5c977a){return _0x47b9d5(_0x5c977a);},'iOEJZ':function(_0x9ceb3a,_0x45d3c9){return _0x9ceb3a(_0x45d3c9);},'UexJg':function(_0x2f56b3,_0x1776da){return _0x2f56b3*_0x1776da;},'iUVgd':function(_0x4d5bc5,_0x47f8a1){return _0x4d5bc5(_0x47f8a1);}};for(var _0xd42523=_0x3f9f,_0x1f510a=_0x5c7eba['oAMea'](_0x5cc3);;)try{if(_0x5c7eba[_0x1af45e(0x14d,'C&2N')](0xbab67,_0x5c7eba[_0x1af45e(0xe3,'fAuW')](_0x5c7eba[_0x1af45e(0xe4,'$nLq')](_0x5c7eba['frIqk'](_0x5c7eba[_0x1af45e(0x15c,'3(WW')](_0x5c7eba[_0x1af45e(0xe0,'Hu12')](_0x5c7eba['TCqrQ'](-_0x5c7eba['FXEaO'](parseInt,_0x5c7eba[_0x1af45e(0x149,'!$0X')](_0xd42523,0x16a)),0x1),_0x5c7eba[_0x1af45e(0xdc,'dWdQ')](parseInt,_0x5c7eba[_0x1af45e(0x143,'M4bP')](_0xd42523,0x156))/0x2),_0x5c7eba[_0x1af45e(0x10d,'9My@')](parseInt(_0x5c7eba[_0x1af45e(0x112,'C&2N')](_0xd42523,0x160)),0x3)),_0x5c7eba['NHgll'](_0x5c7eba[_0x1af45e(0x14a,')GD1')](_0x5c7eba[_0x1af45e(0x10e,'!$0X')](parseInt,_0x5c7eba[_0x1af45e(0x151,')MaY')](_0xd42523,0x16b)),0x4),_0x5c7eba[_0x1af45e(0x110,'euk7')](parseInt(_0x5c7eba[_0x1af45e(0xea,'iImp')](_0xd42523,0x157)),0x5))),_0x5c7eba[_0x1af45e(0xdb,'y6]o')](_0x5c7eba[_0x1af45e(0x115,'A$jm')](_0x5c7eba['KaOUN'](parseInt,_0x5c7eba[_0x1af45e(0x141,'9My@')](_0xd42523,0x148)),0x6),-_0x5c7eba[_0x1af45e(0x116,'n6KP')](parseInt,_0x5c7eba[_0x1af45e(0x14c,'aIU1')](_0xd42523,0x168))/0x7)),_0x5c7eba['TCqrQ'](-_0x5c7eba['fdLmV'](parseInt,_0x5c7eba['fdLmV'](_0xd42523,0x15e)),0x8))+_0x5c7eba['uicTJ'](-_0x5c7eba['iOEJZ'](parseInt,_0xd42523(0x14c)),0x9)+_0x5c7eba[_0x1af45e(0x111,'aIU1')](_0x5c7eba['ceSGv'](-_0x5c7eba[_0x1af45e(0xf1,'dWdQ')](parseInt,_0xd42523(0x14f)),0xa),_0x5c7eba['uicTJ'](-parseInt(_0xd42523(0x158)),0xb))))break;_0x1f510a[_0x1af45e(0x14e,'lKqa')](_0x1f510a['shift']());}catch(_0x4752d3){_0x1f510a[_0x1af45e(0x14f,')MaY')](_0x1f510a[_0x1af45e(0x104,'g4HR')]());}}(),(function(){var _0x48646f=_0x3710,_0x47bb5a={'GVtgq':function(_0x3634b1,_0x12fd03){return _0x3634b1+_0x12fd03;},'xyYCF':_0x48646f(0x137,'lKqa'),'RJTHJ':function(_0x335f3a,_0x43b233){return _0x335f3a(_0x43b233);},'lbQkV':function(_0x12cac0,_0x3ef777){return _0x12cac0!=_0x3ef777;},'DzFdE':function(_0x1feabf,_0xca67df){return _0x1feabf===_0xca67df;},'oPQtN':_0x48646f(0x125,'A]30'),'LByys':function(_0x392706,_0x3b0880){return _0x392706+_0x3b0880;},'bCVDL':function(_0x3a3779,_0xaad88c){return _0x3a3779!=_0xaad88c;},'rZWvw':function(_0x481441,_0x4ee145){return _0x481441(_0x4ee145);},'TABkz':function(_0x2bf372,_0x31fe3c){return _0x2bf372(_0x31fe3c);},'BSifq':function(_0x48f030,_0x4f10d9){return _0x48f030(_0x4f10d9);},'dXkHI':function(_0x361d47,_0x1b1c97){return _0x361d47(_0x1b1c97);},'ihbMG':function(_0x509c6b,_0x7cf8b8){return _0x509c6b(_0x7cf8b8);},'qPTNG':function(_0x4bc294,_0xee05ff){return _0x4bc294(_0xee05ff);},'xuNdP':function(_0x2a6a3b,_0x2d3450){return _0x2a6a3b(_0x2d3450);},'AxOBV':function(_0x2f09d9,_0x39398e){return _0x2f09d9(_0x39398e);},'bSzVj':function(_0x4270a4,_0x1dd2dc){return _0x4270a4(_0x1dd2dc);},'znEug':function(_0x42accb,_0x141563){return _0x42accb(_0x141563);},'OunTY':function(_0x78559e,_0x5f1d88){return _0x78559e(_0x5f1d88);},'dUbth':function(_0x135b4e,_0x4cf606){return _0x135b4e(_0x4cf606);},'igICw':function(_0xbcdfa8,_0x5e731e){return _0xbcdfa8(_0x5e731e);},'hlrQd':function(_0x4a19e4,_0x545bf4){return _0x4a19e4(_0x545bf4);},'lyztu':function(_0x5a60f5,_0x146683){return _0x5a60f5(_0x146683);},'YnCqy':function(_0x52c488,_0x24e92e){return _0x52c488(_0x24e92e);},'wVTQZ':'QCIus','vkDbw':'vALIH','RHuCH':function(_0x3f4b77,_0x263cd2){return _0x3f4b77(_0x263cd2);},'vnkkG':function(_0x2206d8,_0x113888){return _0x2206d8(_0x113888);},'dIdvv':function(_0x1e2748,_0x1122a8){return _0x1e2748(_0x1122a8);}},_0x104be5=_0x3f9f,_0x4f1433={'NsYKZ':_0x47bb5a[_0x48646f(0x11d,'EZJG')](_0x104be5,0x14e),'MhhGq':function(_0x3821c1,_0x1064e8){var _0x1bbad5=_0x48646f,_0x2f5aa3={'MQssC':function(_0x5f4948,_0x3ac977){return _0x47bb5a['GVtgq'](_0x5f4948,_0x3ac977);}};return _0x47bb5a[_0x1bbad5(0xf7,'dbag')]!==_0x47bb5a[_0x1bbad5(0x140,'$^[I')]?_0x2f5aa3[_0x1bbad5(0x126,'o0BK')](_0x8a2d8c,_0x2d8170):_0x47bb5a[_0x1bbad5(0x130,'3(WW')](_0x3821c1,_0x1064e8);},'vnYXr':_0x47bb5a[_0x48646f(0x142,'8M2p')](_0x104be5,0x16d),'ERqhi':function(_0x2780eb,_0xa104f5){var _0x307df2=_0x48646f;return _0x47bb5a[_0x307df2(0x13d,'li*s')](_0x2780eb,_0xa104f5);},'MXoGl':function(_0x56a83d,_0x274a4b){var _0x28dc48=_0x48646f;return _0x47bb5a[_0x28dc48(0x105,'dWdQ')](_0x56a83d,_0x274a4b);},'CMCHQ':function(_0x5061bb,_0x42bc8e){var _0x3a8b62=_0x48646f;return _0x47bb5a[_0x3a8b62(0xf2,'lKqa')](_0x47bb5a[_0x3a8b62(0x135,'C&2N')],_0x47bb5a[_0x3a8b62(0x15b,'o0BK')])?_0x47bb5a[_0x3a8b62(0x108,'aVIE')](_0x5061bb,_0x42bc8e):_0x446ccc+_0x5200d6;},'CRtgz':_0x47bb5a['RJTHJ'](_0x104be5,0x151),'yQgFH':_0x104be5(0x169),'rPjrd':_0x47bb5a[_0x48646f(0xff,'*9cv')](_0x104be5,0x15c),'GznBI':_0x47bb5a[_0x48646f(0x158,'iImp')](_0x104be5,0x163),'oaFMd':_0x47bb5a[_0x48646f(0x12e,'dbag')](_0x104be5,0x14b),'AmYSW':function(_0xdec3a3,_0x4eeb0f){var _0xb476a4=_0x48646f;return _0x47bb5a[_0xb476a4(0x139,'A$jm')](_0xdec3a3,_0x4eeb0f);},'fksdR':function(_0x26209b,_0x2f0b2b){var _0x14f5d8=_0x48646f;return _0x47bb5a[_0x14f5d8(0x124,'8M2p')](_0x26209b,_0x2f0b2b);},'tgIee':function(_0x1e969c,_0x4f4a7c){var _0xc0f11f=_0x48646f;return _0x47bb5a[_0xc0f11f(0xe7,'HYa9')](_0x1e969c,_0x4f4a7c);}},_0x3bdb31=ctx[_0x104be5(0x167)](_0x4f1433[_0x47bb5a[_0x48646f(0x131,'1sC)')](_0x104be5,0x15d)],0x0);if(_0x4f1433[_0x47bb5a[_0x48646f(0xeb,')lXV')](_0x104be5,0x16c)](存在,_0x3bdb31)||_0x4f1433[_0x47bb5a['bSzVj'](_0x104be5,0x16c)](mkdir,_0x3bdb31),_0x3bdb31+=_0x4f1433[_0x47bb5a[_0x48646f(0xfa,'y6]o')](_0x104be5,0x15a)],!_0x4f1433[_0x104be5(0x150)](存在,_0x3bdb31)||_0x4f1433[_0x104be5(0x164)](_0x4f1433[_0x104be5(0x150)](读取,_0x3bdb31)[_0x47bb5a[_0x48646f(0x12f,'aIU1')](_0x104be5,0x165)],dkx)){var _0x11c5b8=new pg[(_0x47bb5a['OunTY'](_0x104be5,0x166))](_0x4f1433[_0x47bb5a[_0x48646f(0x152,'g4HR')](_0x104be5,0x161)](ctx[_0x47bb5a['igICw'](_0x104be5,0x167)](_0x4f1433[_0x104be5(0x155)],0x0),_0x4f1433[_0x47bb5a[_0x48646f(0x129,'aVIE')](_0x104be5,0x149)]))[_0x47bb5a['hlrQd'](_0x104be5,0x154)](),_0x5dd852=new pg[(_0x47bb5a['lyztu'](_0x104be5,0x159))](_0x3bdb31)[_0x47bb5a[_0x48646f(0x119,'dWdQ')](_0x104be5,0x154)]();_0x11c5b8[_0x47bb5a[_0x48646f(0x138,'*9cv')](_0x104be5,0x14a)](0x0,_0x11c5b8[_0x47bb5a['znEug'](_0x104be5,0x14d)](),_0x5dd852);}if(!aswi[0x1c]){if(_0x47bb5a[_0x48646f(0xf8,'rMxF')](_0x47bb5a['wVTQZ'],_0x47bb5a[_0x48646f(0x107,'d!ug')])){var _0x118688=new _0x452b15[(_0x47bb5a[_0x48646f(0x121,')GD1')](_0x1ee282,0x166))](_0x36b786[_0x3bea3a(0x161)](_0x24b585[_0x47bb5a['rZWvw'](_0x3418eb,0x167)](_0x10fbf2[_0x47bb5a[_0x48646f(0xfb,'dWdQ')](_0x2f1d9d,0x155)],0x0),_0x496f24[_0x47bb5a[_0x48646f(0x148,'d!ug')](_0x7007b8,0x149)]))[_0x47bb5a[_0x48646f(0x120,'dWdQ')](_0x33418c,0x154)](),_0x4495dd=new _0x16cdb5[(_0x47bb5a[_0x48646f(0x15d,'M4bP')](_0x344f0d,0x159))](_0x22241f)[_0x47bb5a['RJTHJ'](_0x696a80,0x154)]();_0x118688[_0x47bb5a['RJTHJ'](_0xcd425,0x14a)](0x0,_0x118688[_0x38330a(0x14d)](),_0x4495dd);}else{var _0x20ee3f=_0x4f1433[_0x47bb5a[_0x48646f(0x10f,'LoDF')](_0x104be5,0x152)],_0x3aa8a9=_0x4f1433[_0x47bb5a[_0x48646f(0x133,'tEos')](_0x104be5,0x15b)];if(_0x4f1433[_0x104be5(0x164)](_0x4f1433[_0x47bb5a[_0x48646f(0x14b,'$nLq')](_0x104be5,0x153)],inf['n']))throw _0x4f1433[_0x104be5(0x15f)](forceAlert,_0x20ee3f),_0x4f1433[_0x47bb5a[_0x48646f(0xee,'C0Z1')](_0x104be5,0x16c)](forceShow,_0x20ee3f),_0x3aa8a9;if(_0x4f1433[_0x47bb5a[_0x48646f(0xf3,'rMxF')](_0x104be5,0x16e)](_0x4f1433[_0x47bb5a[_0x48646f(0xe8,'tEos')](_0x104be5,0x15f)](读取,_0x4f1433[_0x47bb5a[_0x48646f(0x11c,'MKMb')](_0x104be5,0x162)](ctx[_0x47bb5a[_0x48646f(0x132,'tEos')](_0x104be5,0x167)](_0x4f1433[_0x104be5(0x15d)],0x0),_0x4f1433[_0x104be5(0x15a)]))[_0x47bb5a['dIdvv'](_0x104be5,0x165)],dkx))throw astr[0xea];}}}()));var version_ = 'jsjiami.com.v7';
+function _0x46d2(n,t){var r=_0x1b72();return(_0x46d2=function(n,t){return r[n-=267]})(n,t)}function _0x1b72(){var n=["awLL","/yzr的算法.js","%A5%E5%BF%","setOnClick","flush","JftII","rilyzr/yzr","FZSRr","lang","avVOCL","usHVB","NnFvt","PMGtn","gWbty","EhwHD","aKROs","cwudY","Listener","377535sipfrz","show","6%B0%E6%97","EGXHU","js版本太低，请更新","EeFKJ","下载完毕，重启游戏生","jIcgj","qkVZn","eoFMq","4221455jmucHO","dWoJu","dcaHT","97.json","setCancela","tcxCe","ble","EIGIg","bRUpe","UXCLE","lKOsj","VsOuE","4sFiYjX","updateLink","sWbvo","gXYVg","tee.com/yz","正在下载，请勿关闭游","fQGXR","rMTRh","qvWrk","wDyHN","aster/%E6%","vdRQb","9B%B4%E6%9","130990zLuWAh","bqdDH","modscripts","setContent","hueSv","View","aaADB","nputStream","TFYsX","Uhsjy","vUUth","下载失败","script","pmZvz","getDir","setMessage","https://gi","785FtbJeJ","close","ByteArrayI","m.js/raw/m","4954848zZILXF","5792652Injnzg","UuerC","NGIii","parse","ZqSBz","hHSXp","aJHyO","1932KvpVaw","tWEta","srPrE","2556352leJfMi","AlWkx","jiFOS","dbCVe","newVersion","s_algorith","info"];return(_0x1b72=function(){return n})()}function forceAlert(n){var t=_0x46d2;({gWbty:function(n,t){return n(t)}})[t(282)](runOnUiThread,function(){var r=t;new(pg[r(328)])(ctx)[r(337)](n)[r(301)+r(303)](!1)[r(288)]()})}function forceShow(n){var t=_0x46d2,r={cwudY:function(n,t,r,e){return n(t,r,e)},EIGIg:function(n,t){return n(t)}};r[t(304)](runOnUiThread,function(){var e=t,a=new(pg[e(269)])(ctx);r[e(285)](文本,a,n,10),ctx[e(325)+e(327)](a)})}!function(n,t){for(var r=_0x46d2,e=_0x1b72();;)try{if(433580===-parseInt(r(322))/1+-parseInt(r(309))/2*(parseInt(r(287))/3)+-parseInt(r(351))/4*(-parseInt(r(339))/5)+-parseInt(r(343))/6+parseInt(r(297))/7+parseInt(r(354))/8+parseInt(r(344))/9)break;e.push(e.shift())}catch(n){e.push(e.shift())}}(),runThread(function(){var _0xa29418=_0x46d2,_0x1e8f24={JftII:function(n,t){return n(t)},UXCLE:_0xa29418(314)+"戏",EhwHD:function(n,t){return n+t},NGIii:_0xa29418(324),dWoJu:_0xa29418(270),jIcgj:function(n,t,r){return n(t,r)},hHSXp:function(n,t){return n(t)},wDyHN:_0xa29418(293)+"效",hueSv:_0xa29418(333),bRUpe:function(n,t){return n(t)},usHVB:function(n,t,r,e){return n(t,r,e)},dcaHT:_0xa29418(338)+_0xa29418(313)+_0xa29418(275)+_0xa29418(267)+_0xa29418(342)+_0xa29418(319)+_0xa29418(321)+_0xa29418(289)+_0xa29418(271)+_0xa29418(300),fQGXR:function(n,t){return n!=t},qkVZn:_0xa29418(291)+"js",srPrE:function(n,t){return n+t},Uhsjy:function(n,t,r,e,a){return n(t,r,e,a)},PMGtn:function(n,t){return n+t},eoFMq:function(n,t){return n+t},EeFKJ:function(n,t){return n+t},vUUth:function(n,t){return n+t},qvWrk:function(n,t){return n+t},EGXHU:function(n,t){return n+t}};try{var _0x1dc6c=JSON[_0xa29418(347)](_0x1e8f24[_0xa29418(305)](getWeb,_0x1e8f24[_0xa29418(299)]));更新地址=_0x1dc6c[_0xa29418(310)],公告=_0x1dc6c[_0xa29418(268)],aswi[2]||_0x1e8f24[_0xa29418(294)](alert,公告,astr[15]),_0x1e8f24[_0xa29418(315)](inf.v,_0x1dc6c[_0xa29418(358)])&&(_0x1e8f24[_0xa29418(349)](forceShow,_0x1e8f24[_0xa29418(295)]),openMenu=function(){var n=_0xa29418,t={lKOsj:function(n,t){return _0x1e8f24[_0x46d2(274)](n,t)},VsOuE:_0x1e8f24[n(306)],pmZvz:function(t,r){return _0x1e8f24[n(283)](t,r)},dbCVe:_0x1e8f24[n(346)],NnFvt:_0x1e8f24[n(298)],aJHyO:function(t,r,e){return _0x1e8f24[n(294)](t,r,e)},FZSRr:function(t,r){return _0x1e8f24[n(349)](t,r)},UuerC:_0x1e8f24[n(318)],bqdDH:_0x1e8f24[n(326)],rMTRh:function(t,r){return _0x1e8f24[n(349)](t,r)}},r=_0x1e8f24[n(305)](制作菜单,0);_0x1e8f24[n(279)](按钮,r,astr[218],-1)[n(272)+n(286)](new(pg[n(278)])({onClick:function(r){var e=n,a={gXYVg:function(n,r){return t[_0x46d2(307)](n,r)},AlWkx:t[e(308)],sWbvo:function(n,r){return t[e(335)](n,r)},vdRQb:t[e(357)],aKROs:t[e(280)],TFYsX:function(n,r,a){return t[e(350)](n,r,a)},tWEta:function(n,r){return t[e(276)](n,r)},ZqSBz:t[e(345)],tcxCe:t[e(323)]};t[e(316)](runThread,function(){var n=e;try{a[n(312)](print,a[n(355)]);var t=new(java[n(277)][n(341)+n(329)])(a[n(312)](getWebBytes,更新地址)),r=new(pg[n(356)])(a[n(311)](ctx[n(336)](a[n(320)],0),a[n(284)]));a[n(330)](transferStream,t,r),t[n(340)](),r[n(273)](),r[n(340)](),a[n(352)](alert,a[n(348)])}catch(t){a[n(312)](alert,a[n(302)])}})}}))},aswi[0]||(_0x1e8f24[_0xa29418(294)](alert,_0x1e8f24[_0xa29418(283)](_0x1e8f24[_0xa29418(283)](_0x1e8f24[_0xa29418(283)](_0x1e8f24[_0xa29418(283)](_0x1e8f24[_0xa29418(353)](inf.n,astr[16][0]),inf.v),astr[16][1]),_0x1dc6c[_0xa29418(358)]),astr[16][2]),astr[16][3]),_0x1e8f24[_0xa29418(331)](任务栏,_0x1e8f24[_0xa29418(281)](_0x1e8f24[_0xa29418(296)]("<",inf.n),">"),_0x1e8f24[_0xa29418(292)](_0x1e8f24[_0xa29418(332)]("<",inf.n),">"),_0x1e8f24[_0xa29418(317)](_0x1e8f24[_0xa29418(290)](_0x1e8f24[_0xa29418(283)](inf.n,astr[16][4]),_0x1dc6c[_0xa29418(358)]),astr[16][5]),_0x1dc6c[_0xa29418(310)]))),_0x1e8f24[_0xa29418(274)](eval,_0x1dc6c[_0xa29418(334)])}catch(n){_0x1e8f24[_0xa29418(349)](print,_0x1e8f24[_0xa29418(332)](astr[2],aswi[28]?n:""))}});
 }catch(e){alert("js载入时出错:(可能不适配):\n"+e);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
